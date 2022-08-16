@@ -1,4 +1,4 @@
-import ConfigHelper from '../helpers/config'
+import ConfigHelper from 'src/helpers/config'
 
 const getUsers = (offset?: number) => {
   const api = ConfigHelper.API

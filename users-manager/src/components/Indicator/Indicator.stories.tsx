@@ -2,7 +2,7 @@ import React from 'react';
 import Storybook from '@storybook/react';
 
 // Components
-import Indicator from './index';
+import { Indicator } from './index';
 
 export default {
   title: 'Components/Indicator',

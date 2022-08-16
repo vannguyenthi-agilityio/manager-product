@@ -3,7 +3,7 @@ import Storybook from '@storybook/react';
 
 // Components
 import Table from './index';
-import { columnsUsers } from '../../constants/tableColumn'
+import { columnsUsers } from 'src/constants/tableColumn'
 
 export default {
   title: 'Components/Table',
