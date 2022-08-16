@@ -7,6 +7,7 @@
     "start": "next start -p 9000",
     "storybook": "start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook -s ./public",
+    "build-static": "next build && next export",
     "server-start": "json-server --watch datas/db.json  --port 3001"
   },
   "dependencies": {
@@ -15,17 +16,17 @@
     "@emotion/react": "11",
     "@emotion/styled": "11",
     "@fontsource/inter": "^4.3.0",
+    "@tanstack/react-query": "^4.0.8",
     "@types/react-custom-scrollbars": "^4.0.9",
     "@types/react-scroll": "^1.8.3",
     "framer-motion": "4",
+    "json-server": "0.17.0",
     "next": "12.2.4",
     "react": "18.2.0",
     "react-custom-scrollbars": "^4.2.1",
-    "@tanstack/react-query": "^4.0.8",
     "react-dom": "18.2.0",
-    "react-router-dom": "^5.3.0",
     "react-hook-form": "^7.33.1",
-    "json-server": "0.17.0"
+    "react-router-dom": "^5.3.0"
   },
   "volta": {
     "node": "16.13.0",
@@ -34,13 +35,31 @@
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
-    "@storybook/addon-storysource": "^6.2.9",
     "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",
     "@storybook/addon-links": "^6.3.12",
+    "@storybook/addon-storysource": "^6.2.9",
     "@storybook/react": "^6.3.12",
     "@types/react": "^18.0.17",
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
     "babel-loader": "^8.2.2",
+    "eslint": "^8.22.0",
+    "eslint-plugin-react": "^7.30.1",
+    "prettier": "^2.7.1",
     "typescript": "^4.2.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "pnpm run build-static",
+      "pre-commit": "lint-staged",
+      "pre-merge": "pnpm run build-static"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "npx prettier --write",
+      "eslint src/*.{js,jsx,ts,tsx} --fix-dry-run --no-error-on-unmatched-pattern"
+    ]
   }
 }
