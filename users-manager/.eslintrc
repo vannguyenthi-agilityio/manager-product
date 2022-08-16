@@ -67,6 +67,16 @@
     "no-tabs": "off",
     "no-irregular-whitespace": "off",
     "max-len": "off",
-    "no-trailing-spaces": "warn"
+    "no-trailing-spaces": "warn",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.stories.*",
+          "**/.storybook/**/*.*"
+        ],
+        "peerDependencies": true
+      }
+    ]
   }
 }

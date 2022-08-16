@@ -9,8 +9,12 @@ export default {
   component: Indicator
 };
 
-const Template: Storybook.ComponentStory<typeof Indicator> = args => (
-  <Indicator {...args} />
+const Template: Storybook.ComponentStory<typeof Indicator> = (args) => (
+  <Indicator color="blue" {...args} />
 );
 
 export const Default = Template.bind({});
+Default.args = {
+  size: 'xl',
+  color: 'blue'
+};
