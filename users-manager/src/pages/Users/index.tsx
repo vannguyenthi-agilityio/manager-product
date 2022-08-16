@@ -6,15 +6,14 @@ import {
 } from '@chakra-ui/react'
 import Link from 'next/link'
 import { dehydrate, QueryClient, useQuery } from '@tanstack/react-query'
-import { getUsers } from '../../service/user-service'
-
+import { getUsers } from 'src/service/user-service'
 // Components
-import { Text }  from '../../components/Text'
-import BasicTable from '../../components/Table'
-import { Indicator } from '../../components/Indicator'
-import { User } from '../../models/user'
-import { columnsUsers } from '../../constants/tableColumn'
-import { ROUTES } from '../../constants/routes'
+import { Text }  from 'src/components/Text'
+import BasicTable from 'src/components/Table'
+import { Indicator } from 'src/components/Indicator'
+import { User } from 'src/models/user'
+import { columnsUsers } from 'src/constants/tableColumn'
+import { ROUTES } from 'src/constants/routes'
 
 const Users = () => {
   const {
@@ -58,7 +57,7 @@ export default Users
 export async function getStaticProps() {
   const queryClient = new QueryClient()
 
-  await queryClient.prefetchQuery(['user'], () => getUsers())
+  await queryClient.prefetchQuery(['user'], () => getUsers(1))
 
   return {
     props: {
