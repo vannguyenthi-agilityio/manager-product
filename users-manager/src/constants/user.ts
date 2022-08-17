@@ -7,14 +7,14 @@ export namespace USER {
   }
 
   export enum PLANS {
-    TEAM='Team',
-    ENTERPRISE='Enterprise',
-    COMPANY='Company'
+    TEAM = 'Team',
+    ENTERPRISE = 'Enterprise',
+    COMPANY = 'Company'
   };
 
   export enum STATUS {
-    PENDING='Pending',
-    ACTIVE='Active',
-    INACTIVE='Inactive'
+    PENDING = 'Pending',
+    ACTIVE = 'Active',
+    INACTIVE = 'Inactive'
   };
 }
