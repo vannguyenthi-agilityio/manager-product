@@ -1,11 +1,13 @@
+import { USER } from 'src/constants/user'
+
 export interface User {
   id: number
   fullName: string
   userName: string
-  plan: string
+  plan: USER.PLANS
   email: string
-  role: string
-  status: string
+  role: USER.ROLES
+  status: USER.STATUS
   taxId: number
   language?: string
   country?: string
