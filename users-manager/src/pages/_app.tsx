@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app'
 import { ChakraProvider } from '@chakra-ui/react'
-import { Layout } from 'src/layouts/layout'
+import { Layout } from 'src/templates/layout'
 import { Hydrate, QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { CHAKRA_THEME } from 'src/themes/chakra'
 
