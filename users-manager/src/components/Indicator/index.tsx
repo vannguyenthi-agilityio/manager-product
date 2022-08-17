@@ -1,8 +1,28 @@
-import React from 'react'
-import { Center, Spinner } from '@chakra-ui/react'
+import React from 'react';
+import {
+  Center,
+  Spinner as SpinnerChakra,
+  SpinnerProps as SpinnerPropsChakra
+} from '@chakra-ui/react';
 
-export const Indicator = () => (
-  <Center h='100%'>
-    <Spinner thickness='4px' speed='0.65s' emptyColor='gray.200' color='blue.500' size='xl' />
+interface SpinnerProps extends SpinnerPropsChakra {
+  color?: string;
+  size?: string;
+}
+
+export const Indicator = ({
+  color = 'blue.500',
+  size = 'xl',
+  ...props
+}: SpinnerProps) => (
+  <Center h="100%">
+    <SpinnerChakra
+      thickness="4px"
+      speed="0.65s"
+      emptyColor="gray.200"
+      color={color}
+      size={size}
+      {...props}
+    />
   </Center>
-)
+);
