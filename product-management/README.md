@@ -1,4 +1,4 @@
-# Product Management React practice
+# Product Management
 
 ## Overview:
 
@@ -23,7 +23,7 @@
 - [Jest](https://jestjs.io/docs/getting-started): is a delightful JavaScript Testing Framework with a focus on simplicity.
 - Editor: Visual Studio Code.
 
-### Development environment:
+### Base dependencies:
 
 - Node: version 16.13.0
 - pnpm: version 7.9.5
@@ -46,7 +46,7 @@
 
 ### Workflow
 
-- [Workflow](https://docs.google.com/document/d/18XNc6Zb3vcJX___EbktJuZ-RuQE86wFIc8GEEOLLvvE/edi)
+- [Workflow](https://docs.google.com/document/d/18XNc6Zb3vcJX___EbktJuZ-RuQE86wFIc8GEEOLLvvE/edit)
 
 ### Task Management
 
@@ -54,15 +54,29 @@
 
 ## Getting started
 
-All commands are run from the root folder, from a terminal:
+All commands are running from the root folder, get source code from a terminal:
 
-| Command                                                                      | Action                      |
-| :--------------------------------------------------------------------------- | :-------------------------- |
-| `$ git clone https://gitlab.asoft-python.com/van.nguyenthi/react-training.git` | Clone Repository with HTTPS |
-| `$ git clone git@gitlab.asoft-python.com:van.nguyenthi/react-training.git`     | Clone Repository with SSH   |
-| `$ cd react-training`                                                          | Redirect to folder          |
-| `$ git checkout feature/product-management`                                    | Checkout branch             |
-| `$ pnpm i`                                                                     | Install packages npm        |
-| `$ pnpm run dev`                                                               | Run webpage                 |
-| `$ pnpm run storybook`                                                         | Run Storybook               |
-| `$ pnpm run test`                                                              | Run Unit Test               |
+- Clone repository with HTTPS:
+`$ git clone https://gitlab.asoft-python.com/van.nguyenthi/react-training.git`
+
+- Clone repository with SSH: 
+`$ git clone git@gitlab.asoft-python.com:van.nguyenthi/react-training.git`
+
+- Redirect to folder:
+`$ cd react-training`
+
+- Checkout branch:
+`$ git checkout feature/product-management`
+
+- Install dependencies:
+
+`$ pnpm i`
+
+- Run web app at local:
+`$ pnpm run dev`
+
+- Run Storybook:
+`$ pnpm run storybook`
+
+- Run Unit Test:
+`$ pnpm run test`
