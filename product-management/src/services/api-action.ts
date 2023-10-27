@@ -3,8 +3,8 @@ import axios from 'axios';
 // constants
 import { MESSAGES } from '@constants';
 
-// interfaces
-import { Product } from '@interfaces';
+// types
+import { Product } from '@types';
 
 // constants
 import { PRODUCTS_API } from '@constants';
