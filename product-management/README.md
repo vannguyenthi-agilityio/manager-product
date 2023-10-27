@@ -50,7 +50,7 @@
 
 ### Task Management
 
-- [Gitlab](https://trello.com/b/YKtKOCrU/issues-of-practice-1)
+- [Gitlab](https://gitlab.asoft-python.com/van.nguyenthi/react-training/-/issues)
 
 ## Getting started
 
