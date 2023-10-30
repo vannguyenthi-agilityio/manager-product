@@ -11,6 +11,9 @@ import Fonts from '../src/components/fonts';
 // Constants
 import { COLORS } from '@constants';
 
+// Components
+import { CloseIcon, DeleteIcon } from '@components/common/Icons';
+
 const App = () => {
   return (
     <ChakraProvider theme={CHAKRA_THEME}>
@@ -56,6 +59,9 @@ const App = () => {
             >
               Avaiable
             </Button>
+            {/* Apply component Icon */}
+            <CloseIcon />
+            <DeleteIcon />
           </VStack>
         </Grid>
       </Box>

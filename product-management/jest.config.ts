@@ -3,7 +3,7 @@ export default {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   moduleNameMapper: {
-    '^@components/(.*)': '<rootDir>/src/components/index',
+    '^@components/(.*)': '<rootDir>/src/components/$1',
     '^@pages/(.*)': '<rootDir>/src/pages/index',
     '^@themes/(.*)': '<rootDir>/src/themes/index',
     '^@constants': '<rootDir>/src/constants/index',
