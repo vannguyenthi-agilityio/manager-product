@@ -3,13 +3,16 @@ import { ChakraProvider, Box, Text, Code, VStack, Grid, Button } from '@chakra-u
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 
 // Themes
-import CHAKRA_THEME from '../src/themes';
+import CHAKRA_THEME from '@themes/index';
 
 // Font family
-import Fonts from '../src/components/fonts';
+import Fonts from '@components/fonts';
 
 // Constants
 import { COLORS } from '@constants';
+
+// Components
+import { CloseIcon, DeleteIcon } from '@components/common/Icons';
 
 const App = () => {
   return (
@@ -56,6 +59,9 @@ const App = () => {
             >
               Avaiable
             </Button>
+            {/* Apply component Icon */}
+            <CloseIcon />
+            <DeleteIcon />
           </VStack>
         </Grid>
       </Box>

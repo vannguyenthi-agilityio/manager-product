@@ -3,9 +3,9 @@ export default {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   moduleNameMapper: {
-    '^@components/(.*)': '<rootDir>/src/components/index',
+    '^@components/(.*)': '<rootDir>/src/components/$1',
     '^@pages/(.*)': '<rootDir>/src/pages/index',
-    '^@themes/(.*)': '<rootDir>/src/themes/index',
+    '^@themes/(.*)': '<rootDir>/src/themes/$1',
     '^@constants': '<rootDir>/src/constants/index',
     '^@contexts': '<rootDir>/src/contexts/index',
     '^@utils/(.*)': '<rootDir>/src/utils/$1',
