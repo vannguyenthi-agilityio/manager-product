@@ -1,10 +1,17 @@
-import { ChakraProvider, Box, Text, Link, VStack, Code, Grid, theme } from '@chakra-ui/react';
+import { ChakraProvider, Box, Text, Link, VStack, Code, Grid } from '@chakra-ui/react';
 
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 
+// Themes
+import CHAKRA_THEME from '../src/themes';
+
+// Font family
+import Fonts from '../src/components/fonts';
+
 const App = () => {
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider theme={CHAKRA_THEME}>
+      <Fonts />
       <Box
         textAlign='center'
         fontSize='xl'

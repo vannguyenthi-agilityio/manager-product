@@ -48,7 +48,7 @@ export enum INPUT_SIZE {
 
 export enum PRODUCT_STATUS {
   AVAILABLE = 'available',
-  SOLD_OUT ='sold_out'
+  SOLD_OUT = 'sold_out'
 }
 
 export enum PRODUCT_TYPE {
@@ -60,7 +60,7 @@ export enum PRODUCT_TYPE {
 
 export enum STATUS {
   SUCCESS = 'success',
-  ERROR = 'error',
+  ERROR = 'error'
 }
 
 export enum SORT_TYPE {

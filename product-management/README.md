@@ -57,15 +57,19 @@
 All commands are running from the root folder, get source code from a terminal:
 
 ### Clone repository with HTTPS:
+
 `$ git clone https://gitlab.asoft-python.com/van.nguyenthi/react-training.git`
 
-### Clone repository with SSH: 
+### Clone repository with SSH:
+
 `$ git clone git@gitlab.asoft-python.com:van.nguyenthi/react-training.git`
 
 ### Redirect to folder:
+
 `$ cd react-training`
 
 ### Checkout branch:
+
 `$ git checkout feature/product-management`
 
 ### Install dependencies:
@@ -73,10 +77,13 @@ All commands are running from the root folder, get source code from a terminal:
 `$ pnpm i`
 
 ### Run web app at local:
+
 `$ pnpm run dev`
 
 ### Run Storybook:
+
 `$ pnpm run storybook`
 
 ### Run Unit Test:
+
 `$ pnpm run test`
