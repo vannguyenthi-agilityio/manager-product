@@ -6,6 +6,8 @@ import CUSTOM_COLORS_PALETTE from './colors';
 
 // Custom theme of Component
 import buttonTheme from './components/button';
+import selectTheme from './components/select';
+
 import { COLORS } from '@constants';
 import CUSTOM_FONTS from './fonts';
 import CUSTOM_SHADOWS from './shadows';
@@ -14,7 +16,8 @@ import CUSTOM_RADIUS from './radius';
 const CHAKRA_THEME = {
   ...extendTheme({
     components: {
-      Button: buttonTheme
+      Button: buttonTheme,
+      Select: selectTheme
     },
     colors: CUSTOM_COLORS_PALETTE,
     fonts: CUSTOM_FONTS,
