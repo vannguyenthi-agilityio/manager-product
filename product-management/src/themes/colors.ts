@@ -105,6 +105,10 @@ const CUSTOM_COLORS_PALETTE = {
   conal: {
     500: '#d0d5dd',
     600: '#d0d5dd'
+  },
+
+  black: {
+    500: '#00072b'
   }
 };
 

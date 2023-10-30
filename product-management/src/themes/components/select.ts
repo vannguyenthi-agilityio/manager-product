@@ -32,8 +32,8 @@ const selectTheme = {
   variants: {
     outline: {
       field: {
-        borderColor: `${COLORS.GREY}.500`,
-        color: `${COLORS.BLACK}`,
+        borderColor: `${COLORS.CONAL}.500`,
+        color: `${COLORS.BLACK}.500`,
         opacity: '0.8',
         height: convertPxToRem(44),
         borderRadius: '8px',
