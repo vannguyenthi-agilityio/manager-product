@@ -10,11 +10,21 @@ import Fonts from '@components/fonts';
 
 // Constants
 import { COLORS } from '@constants';
+import { PRODUCT_STATUS } from '@constants';
 
 // Components
 import { CloseIcon, DeleteIcon } from '@components/common/Icons';
+import { Select } from '@components/common/Select';
+
+// Utils
+import { convertStringToCapitalize } from '@utils/index';
 
 const App = () => {
+  const status = Object.values(PRODUCT_STATUS).map((status) => ({
+    label: convertStringToCapitalize(status === PRODUCT_STATUS.SOLD_OUT ? 'Sold Out' : status),
+    value: status
+  }));
+
   return (
     <ChakraProvider theme={CHAKRA_THEME}>
       <Fonts />
@@ -62,6 +72,11 @@ const App = () => {
             {/* Apply component Icon */}
             <CloseIcon />
             <DeleteIcon />
+            {/* Apply component Select */}
+            <Select
+              label='Select'
+              options={status}
+            />
           </VStack>
         </Grid>
       </Box>
