@@ -8,6 +8,9 @@ import CHAKRA_THEME from '../src/themes';
 // Font family
 import Fonts from '../src/components/fonts';
 
+// Constants
+import { COLORS } from '@constants';
+
 const App = () => {
   return (
     <ChakraProvider theme={CHAKRA_THEME}>
@@ -37,6 +40,21 @@ const App = () => {
               colorScheme='red'
             >
               Sold out
+            </Button>
+            <Button
+              size='lg'
+              variant='outline'
+              color='black'
+              borderColor={`${COLORS.CONAL}.500`}
+            >
+              Save
+            </Button>
+            <Button
+              size='xs'
+              variant='outline'
+              colorScheme='mania'
+            >
+              Avaiable
             </Button>
           </VStack>
         </Grid>

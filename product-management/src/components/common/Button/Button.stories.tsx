@@ -30,7 +30,10 @@ export default {
         'messenger',
         'whatsapp',
         'twitter',
-        'telegram'
+        'telegram',
+        'mania',
+        'coral',
+        'conal'
       ],
       control: {
         type: 'select'

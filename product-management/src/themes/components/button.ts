@@ -10,7 +10,7 @@ export default {
     fontWeight: '400',
     fontStyle: 'normal',
     lineHeight: `${convertPxToRem(17)}`,
-    bgColor: `${COLORS.MANIA}`
+    bgColor: `${COLORS.MANIA}.500`
   },
   sizes: {
     xs: {
@@ -53,9 +53,6 @@ export default {
         outline: `solid 1px ${COLORS.WHITE}`,
         outlineOffset: -3
       }
-    },
-    outline: {
-      bgColor: `${COLORS.MANIA}`
     },
     link: {
       color: `${COLORS.MANIA}`,

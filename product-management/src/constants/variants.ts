@@ -21,5 +21,6 @@ export enum COLORS {
   WHITE = 'white',
   BLACK = 'black',
   CONAL = 'conal',
+  CORAL = 'coral',
   MANIA = 'mania'
 }

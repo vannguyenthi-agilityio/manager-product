@@ -92,9 +92,20 @@ const CUSTOM_COLORS_PALETTE = {
     500: '#53aae7'
   },
 
-  mania: '#7fc008',
-  coral: '#db303f',
-  conal: '#d0d5dd'
+  mania: {
+    500: '#7fc008',
+    600: '#7fc008'
+  },
+
+  coral: {
+    500: '#db303f',
+    600: '#db303f'
+  },
+
+  conal: {
+    500: '#d0d5dd',
+    600: '#d0d5dd'
+  }
 };
 
 export default CUSTOM_COLORS_PALETTE;
