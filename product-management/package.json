@@ -23,6 +23,7 @@
     "framer-motion": "^10.16.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.1",
     "react-icons": "^3.11.0",
     "react-hook-form": "^7.47.0",
     "ts-node": "^10.9.1"
@@ -70,14 +71,5 @@
     "vite-plugin-compression": "^0.5.1",
     "vite-tsconfig-paths": "^4.0.5",
     "vite-plugin-environment": "^1.1.3"
-  },
-  "lint-staged": {
-    "*.{js,ts,tsx}": [
-      "eslint src/*.{js,jsx,ts,tsx} --fix-dry-run --no-error-on-unmatched-pattern"
-    ],
-    "*.css": [
-      "pnpm prettier -w",
-      "npx stylelint src/**/*.css"
-    ]
   }
 }
