@@ -3,7 +3,7 @@ import { ChakraProvider, Box, Text, Code, VStack, Grid, Button } from '@chakra-u
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 
 // Themes
-import CHAKRA_THEME from '@themes/colors';
+import CHAKRA_THEME from '@themes/index';
 
 // Font family
 import Fonts from '@components/fonts';
