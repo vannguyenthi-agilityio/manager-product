@@ -1,5 +1,7 @@
-// Helpers
+// Constants
 import { COLORS } from '@constants';
+
+// Utils
 import { convertPxToRem } from '@utils/common';
 
 export default {
@@ -53,7 +55,7 @@ export default {
       }
     },
     outline: {
-      border: `solid 1px ${COLORS.MANIA}`
+      bgColor: `${COLORS.MANIA}`
     },
     link: {
       color: `${COLORS.MANIA}`,

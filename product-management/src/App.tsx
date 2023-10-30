@@ -1,4 +1,4 @@
-import { ChakraProvider, Box, Text, Link, VStack, Code, Grid } from '@chakra-ui/react';
+import { ChakraProvider, Box, Text, Code, VStack, Grid, Button } from '@chakra-ui/react';
 
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 
@@ -21,19 +21,23 @@ const App = () => {
           p={3}
         >
           <ColorModeSwitcher justifySelf='flex-end' />
+          <Text>
+            Edit <Code fontSize='xl'>src/App.tsx</Code> and save to reload.
+          </Text>
           <VStack spacing={8}>
-            <Text>
-              Edit <Code fontSize='xl'>src/App.tsx</Code> and save to reload.
-            </Text>
-            <Link
-              color='teal.500'
-              href='https://chakra-ui.com'
-              fontSize='2xl'
-              target='_blank'
-              rel='noopener noreferrer'
+            <Button
+              size='lg'
+              variant='solid'
             >
-              Learn Chakra
-            </Link>
+              Submit
+            </Button>
+            <Button
+              size='xs'
+              variant='outline'
+              colorScheme='red'
+            >
+              Sold out
+            </Button>
           </VStack>
         </Grid>
       </Box>
