@@ -1,4 +1,4 @@
-import { ChakraProvider, Box, Text, Code, VStack, Grid, Button } from '@chakra-ui/react';
+import { ChakraProvider, Box, Text, Code, VStack, Grid, Button, Input } from '@chakra-ui/react';
 
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 
@@ -77,6 +77,8 @@ const App = () => {
               label='Select'
               options={status}
             />
+            {/* Apply component Input */}
+            <Input placeholder='Basic usage' />
           </VStack>
         </Grid>
       </Box>
