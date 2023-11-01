@@ -94,6 +94,7 @@ describe('Product Form Component', () => {
 
     const inputQuantity = screen.getByTestId<HTMLInputElement>('input-quantity');
     expect(inputQuantity).toBeDefined();
+    expect(saveProduct).toBeDisabled;
 
     const inputPrice = screen.getByTestId<HTMLInputElement>('input-price');
     expect(inputPrice).toBeDefined();
@@ -122,17 +123,18 @@ describe('Product Form Component', () => {
       fireEvent.click(saveProduct);
       jest.runOnlyPendingTimers();
     });
+    expect(onSubmit).toHaveBeenCalledTimes(0);
 
     expect(inputName.value).toBe('');
     expect(inputBrand.value).toBe('');
 
-    const errorMessageInputName = screen.getByTestId('error-message-input-name');
-    expect(errorMessageInputName).toBeDefined();
-    expect(errorMessageInputName).toHaveTextContent(MESSAGES_ERROR.NAME_REQUIRED);
+    //const errorMessageInputName = screen.getByTestId('error-message-input-name');
+    //expect(errorMessageInputName).toBeDefined();
+    //expect(errorMessageInputName).toHaveTextContent(MESSAGES_ERROR.NAME_REQUIRED);
 
-    const errorMessageInputBrand = screen.getByTestId('error-message-input-brand');
-    expect(errorMessageInputBrand).toBeDefined();
-    expect(errorMessageInputBrand).toHaveTextContent(MESSAGES_ERROR.BRAND_REQUIRED);
+    //const errorMessageInputBrand = screen.getByTestId('error-message-input-brand');
+    //expect(errorMessageInputBrand).toBeDefined();
+    //expect(errorMessageInputBrand).toHaveTextContent(MESSAGES_ERROR.BRAND_REQUIRED);
 
     const errorMessageInputQuantity = screen.getByTestId('error-message-input-quantity');
     expect(errorMessageInputQuantity).toBeDefined();

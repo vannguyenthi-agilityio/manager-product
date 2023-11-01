@@ -30,15 +30,17 @@ export const FormDetail: FC<IFormProductProps> = () => {
   const { handleSubmit, register, formState } = useForm<IFormProductProps>({
     defaultValues: {
       product: MOCKED_PRODUCT_VALUE_DEFAULT
-    }
+    },
+    mode: 'onChange'
   });
 
   const navigate = useNavigate();
 
-  const { isSubmitting, isDirty, errors } = formState;
+  const { isSubmitting, errors, dirtyFields } = formState;
 
   const disableBtnSubmit =
-    !isDirty ||
+    !dirtyFields.product?.name ||
+    !dirtyFields.product?.brand ||
     !!errors.product?.name?.message ||
     !!errors.product?.brand?.message ||
     !!errors.product?.price?.message ||
