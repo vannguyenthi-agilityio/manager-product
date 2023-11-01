@@ -1,7 +1,7 @@
 // Libraries
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
-import { FC, FormEvent } from 'react';
+import { FC, FormEvent, useRef } from 'react';
 
 import { Box, Button, HStack } from '@chakra-ui/react';
 
@@ -27,7 +27,7 @@ export interface IFormProductProps {
 }
 
 export const FormDetail: FC<IFormProductProps> = () => {
-  const { handleSubmit, register, formState } = useForm<IFormProductProps>({
+  const { handleSubmit, register, formState, watch } = useForm<IFormProductProps>({
     defaultValues: {
       product: MOCKED_PRODUCT_VALUE_DEFAULT
     },
@@ -38,13 +38,22 @@ export const FormDetail: FC<IFormProductProps> = () => {
 
   const { isSubmitting, errors, dirtyFields } = formState;
 
+  const price = useRef({});
+  const quantity = useRef({});
+  price.current = watch('product.price', 0);
+  quantity.current = watch('product.quantity', 0);
+  const isEmptyPrice = price.current.toString() == '';
+  const isEmptyQuantity = quantity.current.toString() == '';
+
   const disableBtnSubmit =
     !dirtyFields.product?.name ||
     !dirtyFields.product?.brand ||
     !!errors.product?.name?.message ||
     !!errors.product?.brand?.message ||
     !!errors.product?.price?.message ||
-    !!errors.product?.quantity?.message;
+    !!errors.product?.quantity?.message ||
+    isEmptyPrice ||
+    isEmptyQuantity;
 
   const onSubmit = (data: IFormProductProps) => {
     console.log(data);

@@ -7,7 +7,7 @@ import { MemoryRouter } from 'react-router-dom';
 import FormDetail from '.';
 
 // Constants
-import { MOCKED_PRODUCT_VALUE_DEFAULT, MESSAGES_ERROR } from '@constants';
+import { MOCKED_PRODUCT_VALUE_DEFAULT } from '@constants';
 
 const onBack = jest.fn();
 const onSubmit = jest.fn();
@@ -127,21 +127,5 @@ describe('Product Form Component', () => {
 
     expect(inputName.value).toBe('');
     expect(inputBrand.value).toBe('');
-
-    //const errorMessageInputName = screen.getByTestId('error-message-input-name');
-    //expect(errorMessageInputName).toBeDefined();
-    //expect(errorMessageInputName).toHaveTextContent(MESSAGES_ERROR.NAME_REQUIRED);
-
-    //const errorMessageInputBrand = screen.getByTestId('error-message-input-brand');
-    //expect(errorMessageInputBrand).toBeDefined();
-    //expect(errorMessageInputBrand).toHaveTextContent(MESSAGES_ERROR.BRAND_REQUIRED);
-
-    const errorMessageInputQuantity = screen.getByTestId('error-message-input-quantity');
-    expect(errorMessageInputQuantity).toBeDefined();
-    expect(errorMessageInputQuantity).toHaveTextContent(MESSAGES_ERROR.QUANTITY_REQUIRED);
-
-    const errorMessageInputPrice = screen.getByTestId('error-message-input-price');
-    expect(errorMessageInputPrice).toBeDefined();
-    expect(errorMessageInputPrice).toHaveTextContent('Input price is required');
   });
 });

@@ -123,9 +123,8 @@ exports[`Product Form Component should render correctly 1`] = `
         </label>
       </div>
       <div
-        class="chakra-form-control css-0"
+        class="chakra-form-control css-tn9ygg"
         role="group"
-        style="max-width: 200px;"
       >
         <label
           class="chakra-form__label css-1gtigks"

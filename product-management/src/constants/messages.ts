@@ -9,9 +9,6 @@ export const MESSAGES_ERROR = {
   UPDATE_PRODUCT_SUCCESS: 'Add product success!',
   UPDATE_PRODUCT_FAIL: 'Update product fail!',
   EXIST_PRODUCT: 'Product already exist',
-  PRICE_REQUIRED: 'Input price is required',
-  NAME_REQUIRED: 'Input name is required',
   NAME_MIN_LENGTH: 'Minimum length should be 4',
-  QUANTITY_REQUIRED: 'Input quantity is required',
-  BRAND_REQUIRED: 'Input brand is required'
+  NUMBER_REQUIRED: 'Please enter a number'
 };

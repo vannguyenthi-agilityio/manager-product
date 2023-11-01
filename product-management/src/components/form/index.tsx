@@ -13,7 +13,7 @@ import { Select } from '@components/common/Select';
 import { Product } from '@types';
 
 // Constants
-import { PRODUCT_STATUS, PRODUCT_TYPE, MESSAGES_ERROR } from '@constants';
+import { PRODUCT_STATUS, PRODUCT_TYPE, MESSAGES_ERROR, NUNBER_REGEX } from '@constants';
 
 export interface IProductProps {
   product?: Product;
@@ -58,7 +58,7 @@ export const FormProduct: FC<IFormProductProps> = ({ register, formState }) => {
           id='name'
           placeholder='Enter Name...'
           {...register('product.name', {
-            required: MESSAGES_ERROR.NAME_REQUIRED,
+            required: '',
             minLength: { value: 4, message: MESSAGES_ERROR.NAME_MIN_LENGTH }
           })}
           data-testid='input-name'
@@ -83,7 +83,11 @@ export const FormProduct: FC<IFormProductProps> = ({ register, formState }) => {
           id='quantity'
           placeholder='Quantity'
           {...register('product.quantity', {
-            required: MESSAGES_ERROR.QUANTITY_REQUIRED
+            required: '',
+            pattern: {
+              value: NUNBER_REGEX,
+              message: MESSAGES_ERROR.NUMBER_REQUIRED
+            }
           })}
           data-testid='input-quantity'
         />
@@ -107,7 +111,11 @@ export const FormProduct: FC<IFormProductProps> = ({ register, formState }) => {
           id='price'
           placeholder='Price'
           {...register('product.price', {
-            required: MESSAGES_ERROR.PRICE_REQUIRED
+            required: '',
+            pattern: {
+              value: NUNBER_REGEX,
+              message: MESSAGES_ERROR.NUMBER_REQUIRED
+            }
           })}
           data-testid='input-price'
         />
@@ -120,10 +128,7 @@ export const FormProduct: FC<IFormProductProps> = ({ register, formState }) => {
         justifyContent='space-between'
         mt={convertPxToRem(20)}
       >
-        <FormControl
-          isInvalid={!isEmpty(formState?.errors?.product?.status)}
-          maxW={convertPxToRem(200)}
-        >
+        <FormControl maxW={convertPxToRem(200)}>
           <FormLabel
             htmlFor='status'
             fontWeight='bold'
@@ -138,10 +143,7 @@ export const FormProduct: FC<IFormProductProps> = ({ register, formState }) => {
             defaultValue={status[0].value}
           />
         </FormControl>
-        <FormControl
-          isInvalid={!isEmpty(formState?.errors?.product?.types)}
-          style={{ maxWidth: '200px' }}
-        >
+        <FormControl maxWidth='200px'>
           <FormLabel
             htmlFor='status'
             fontWeight='bold'
@@ -173,7 +175,7 @@ export const FormProduct: FC<IFormProductProps> = ({ register, formState }) => {
           id='brand'
           placeholder='Enter Brand...'
           {...register('product.brand', {
-            required: MESSAGES_ERROR.BRAND_REQUIRED,
+            required: '',
             minLength: { value: 4, message: MESSAGES_ERROR.NAME_MIN_LENGTH }
           })}
           data-testid='input-brand'
