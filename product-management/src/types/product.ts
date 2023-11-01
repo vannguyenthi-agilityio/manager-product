@@ -1,4 +1,4 @@
-import { PRODUCT_STATUS, PRODUCT_TYPE } from '@constants'
+import { PRODUCT_STATUS, PRODUCT_TYPE } from '@constants';
 
 export interface Product {
   id: string;
@@ -7,5 +7,5 @@ export interface Product {
   quantity: number;
   brand: string;
   status: PRODUCT_STATUS;
-  type: PRODUCT_TYPE;
+  types: PRODUCT_TYPE;
 }
