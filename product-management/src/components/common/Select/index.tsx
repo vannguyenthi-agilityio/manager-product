@@ -1,5 +1,6 @@
 // Components
 import { Select as ChakraSelect, Text } from '@chakra-ui/react';
+import { forwardRef } from 'react';
 
 // Types
 import type { SelectProps } from '@chakra-ui/react';
@@ -27,7 +28,7 @@ export interface ISelect extends SelectProps {
   value?: string;
 }
 
-export const Select = ({ options, label, value, ...rest }: ISelect) => {
+export const Select = forwardRef(({ options, label, value, ...rest }: ISelect, ref) => {
   return (
     <label>
       {label && (
@@ -39,6 +40,7 @@ export const Select = ({ options, label, value, ...rest }: ISelect) => {
         </Text>
       )}
       <ChakraSelect
+        ref={ref}
         value={value}
         onChange={rest.onChange}
         {...rest}
@@ -55,6 +57,6 @@ export const Select = ({ options, label, value, ...rest }: ISelect) => {
       </ChakraSelect>
     </label>
   );
-};
+});
 
 export default Select;
