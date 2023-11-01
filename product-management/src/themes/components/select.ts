@@ -36,8 +36,8 @@ const selectTheme = {
         color: `${COLORS.BLACK}.500`,
         opacity: '0.8',
         height: convertPxToRem(44),
-        borderRadius: '8px',
-        backgroundColor: 'transparent',
+        borderRadius: 'sm',
+        backgroundColor: `${COLORS.WHITE}`,
         cursor: 'pointer',
         _hover: {
           borderColor: `${COLORS.GREY}.300`
