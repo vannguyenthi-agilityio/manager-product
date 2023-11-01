@@ -35,7 +35,14 @@ export const FormDetail: FC<IFormProductProps> = () => {
 
   const navigate = useNavigate();
 
-  const { isSubmitting } = formState;
+  const { isSubmitting, isDirty, errors } = formState;
+
+  const disableBtnSubmit =
+    !isDirty ||
+    !!errors.product?.name?.message ||
+    !!errors.product?.brand?.message ||
+    !!errors.product?.price?.message ||
+    !!errors.product?.quantity?.message;
 
   const onSubmit = (data: IFormProductProps) => {
     console.log(data);
@@ -78,6 +85,8 @@ export const FormDetail: FC<IFormProductProps> = () => {
           isLoading={isSubmitting}
           onClick={handleSubmit(onSubmit)}
           data-testid='click-save'
+          isDisabled={disableBtnSubmit}
+          style={{ cursor: disableBtnSubmit ? 'not-allowed' : 'pointer' }}
         >
           Save
         </Button>

@@ -225,6 +225,8 @@ exports[`Product Form Component should render correctly 1`] = `
     <button
       class="chakra-button css-1jitvwb"
       data-testid="click-save"
+      disabled=""
+      style="cursor: not-allowed;"
       type="button"
     >
       Save

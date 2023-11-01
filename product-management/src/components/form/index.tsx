@@ -121,7 +121,7 @@ export const FormProduct: FC<IFormProductProps> = ({ register, formState }) => {
         mt={convertPxToRem(20)}
       >
         <FormControl
-          isInvalid={!isEmpty(formState?.errors?.product?.price)}
+          isInvalid={!isEmpty(formState?.errors?.product?.status)}
           maxW={convertPxToRem(200)}
         >
           <FormLabel
@@ -139,7 +139,7 @@ export const FormProduct: FC<IFormProductProps> = ({ register, formState }) => {
           />
         </FormControl>
         <FormControl
-          isInvalid={!isEmpty(formState?.errors?.product?.type)}
+          isInvalid={!isEmpty(formState?.errors?.product?.types)}
           style={{ maxWidth: '200px' }}
         >
           <FormLabel
