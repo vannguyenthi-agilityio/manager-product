@@ -3,4 +3,4 @@ export * from './messages';
 export * from './enums';
 export * from './variants';
 export * from './regex';
-export * from './mockData';
+export * from './mocks/product';
