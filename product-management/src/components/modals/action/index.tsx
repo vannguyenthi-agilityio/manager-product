@@ -29,7 +29,7 @@ export interface IFormProductProps {
   handleSubmit?: (e: FormEvent<HTMLFormElement>) => void;
 }
 
-const CreateProductModal = ({ action = 'create', isOpen = true, onClose, onClick, product }: ICreateProductProps) => {
+const ProductModal = ({ action = 'create', isOpen = true, onClose, onClick, product }: ICreateProductProps) => {
   const { handleSubmit, register, formState, watch } = useForm<IFormProductProps>({
     defaultValues: {
       product: product
@@ -122,4 +122,4 @@ const CreateProductModal = ({ action = 'create', isOpen = true, onClose, onClick
   );
 };
 
-export default CreateProductModal;
+export default ProductModal;

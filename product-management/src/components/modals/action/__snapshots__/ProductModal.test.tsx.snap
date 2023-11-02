@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CreateProductModal component with Snapshot should render correctly 1`] = `
+exports[`ProductModal component with Snapshot should render correctly 1`] = `
 <section
   aria-describedby="chakra-modal--body-:r0:"
   aria-labelledby="chakra-modal--header-:r0:"

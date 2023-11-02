@@ -42,7 +42,7 @@ export interface IFormProductProps {
   handleBack?: (e: FormEvent<HTMLFormElement>) => void;
 }
 
-const CreateProductModal = ({
+const ConfirmModal = ({
   isOpen = true,
   onClose,
   onClick,
@@ -125,4 +125,4 @@ const CreateProductModal = ({
   );
 };
 
-export default CreateProductModal;
+export default ConfirmModal;

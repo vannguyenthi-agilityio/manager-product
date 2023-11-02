@@ -3,7 +3,7 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import { act } from 'react-dom/test-utils';
 
 // Components
-import CreateProductModal from '.';
+import ProductModal from '.';
 
 const onClose = jest.fn();
 const onClick = jest.fn();
@@ -22,10 +22,10 @@ const setup = (moreProps = {}) => {
     ...moreProps
   };
 
-  return render(<CreateProductModal {...props} />);
+  return render(<ProductModal {...props} />);
 };
 
-describe('CreateProductModal component with Snapshot', () => {
+describe('ProductModal component with Snapshot', () => {
   test('should render correctly', () => {
     setup();
 
@@ -35,7 +35,7 @@ describe('CreateProductModal component with Snapshot', () => {
   });
 });
 
-describe('CreateProductModal component', () => {
+describe('ProductModal component', () => {
   test('should call onClick when click confirm button', async () => {
     jest.useFakeTimers();
     setup();
