@@ -20,6 +20,7 @@ interface ICreateProductProps {
   onClose: () => void;
   onClick: () => void;
   product?: Product;
+  action?: string;
   handleSubmit?: (e: FormEvent<HTMLFormElement>) => void;
 }
 
@@ -28,7 +29,7 @@ export interface IFormProductProps {
   handleSubmit?: (e: FormEvent<HTMLFormElement>) => void;
 }
 
-const CreateProductModal = ({ isOpen = true, onClose, onClick, product }: ICreateProductProps) => {
+const CreateProductModal = ({ action = 'create', isOpen = true, onClose, onClick, product }: ICreateProductProps) => {
   const { handleSubmit, register, formState, watch } = useForm<IFormProductProps>({
     defaultValues: {
       product: product
@@ -77,7 +78,7 @@ const CreateProductModal = ({ isOpen = true, onClose, onClick, product }: ICreat
           fontSize='xl'
           mb={convertPxToRem(20)}
         >
-          Add New Product
+          {action === 'create' ? 'Add New Product' : 'Product Information'}
         </ModalHeader>
         <ModalBody>
           <FormProduct
