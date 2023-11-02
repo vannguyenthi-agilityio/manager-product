@@ -7,7 +7,7 @@ import { MemoryRouter } from 'react-router-dom';
 import FormDetail from '.';
 
 // Constants
-import { MOCKED_PRODUCT_VALUE_DEFAULT } from '@constants';
+import { MOCKED_PRODUCT_VALUE_DEFAULT } from '@constants/mocks/product';
 
 const onBack = jest.fn();
 const onSubmit = jest.fn();

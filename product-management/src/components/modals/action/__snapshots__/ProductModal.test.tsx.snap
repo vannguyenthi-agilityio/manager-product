@@ -1,0 +1,256 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductModal component with Snapshot should render correctly 1`] = `
+<section
+  aria-describedby="chakra-modal--body-:r0:"
+  aria-labelledby="chakra-modal--header-:r0:"
+  aria-modal="true"
+  class="chakra-modal__content css-6yiygt"
+  data-testid="create-product-modal"
+  id="chakra-modal-:r0:"
+  role="dialog"
+  style="opacity: 0; transform: scale(0.95) translateZ(0);"
+  tabindex="-1"
+>
+  <header
+    class="chakra-modal__header css-1ehdivf"
+    id="chakra-modal--header-:r0:"
+  >
+    Add New Product
+  </header>
+  <div
+    class="chakra-modal__body css-0"
+    id="chakra-modal--body-:r0:"
+  >
+    <div
+      class="css-6jf9kx"
+      data-testid="form-product"
+    >
+      <div
+        class="chakra-form-control css-3qdq65"
+        role="group"
+      >
+        <label
+          class="chakra-form__label css-1gtigks"
+          data-focus=""
+          for="name"
+          id="field-:r3:-label"
+        >
+          Name
+        </label>
+        <input
+          class="chakra-input css-0"
+          data-testid="input-name"
+          id="name"
+          name="product.name"
+          placeholder="Enter Name..."
+        />
+      </div>
+      <div
+        class="chakra-form-control css-3qdq65"
+        role="group"
+      >
+        <label
+          class="chakra-form__label css-1gtigks"
+          for="quantity"
+          id="field-:r4:-label"
+        >
+          Quantity
+        </label>
+        <input
+          class="chakra-input css-0"
+          data-testid="input-quantity"
+          id="quantity"
+          name="product.quantity"
+          placeholder="Quantity"
+          type="number"
+        />
+      </div>
+      <div
+        class="chakra-form-control css-3qdq65"
+        role="group"
+      >
+        <label
+          class="chakra-form__label css-1gtigks"
+          for="price"
+          id="field-:r5:-label"
+        >
+          Price
+        </label>
+        <input
+          class="chakra-input css-0"
+          data-testid="input-price"
+          id="price"
+          name="product.price"
+          placeholder="Price"
+          type="number"
+        />
+      </div>
+      <div
+        class="chakra-stack css-1y87ypt"
+      >
+        <div
+          class="chakra-form-control css-1ryeq9i"
+          role="group"
+        >
+          <label
+            class="chakra-form__label css-1gtigks"
+            for="status"
+            id="field-:r6:-label"
+          >
+            Status
+          </label>
+          <label>
+            <div
+              class="chakra-select__wrapper css-42b2qy"
+            >
+              <select
+                class="chakra-select css-1ik61og"
+                data-testid="select"
+                id="status"
+                name="product.status"
+              >
+                <option
+                  selected=""
+                  value="available"
+                >
+                  Available
+                </option>
+                <option
+                  value="sold_out"
+                >
+                  Sold out
+                </option>
+              </select>
+              <div
+                class="chakra-select__icon-wrapper css-162mkon"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="chakra-select__icon"
+                  focusable="false"
+                  role="presentation"
+                  style="width: 1em; height: 1em; color: currentColor;"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </label>
+        </div>
+        <div
+          class="chakra-form-control css-tn9ygg"
+          role="group"
+        >
+          <label
+            class="chakra-form__label css-1gtigks"
+            for="status"
+            id="field-:r7:-label"
+          >
+            Types
+          </label>
+          <label>
+            <div
+              class="chakra-select__wrapper css-42b2qy"
+            >
+              <select
+                class="chakra-select css-1ik61og"
+                data-testid="select"
+                id="type"
+                name="product.types"
+              >
+                <option
+                  selected=""
+                  value="Gemstone"
+                >
+                  Gemstone
+                </option>
+                <option
+                  value="metal"
+                >
+                  Metal
+                </option>
+                <option
+                  value="diamond"
+                >
+                  Diamond
+                </option>
+                <option
+                  value="gold"
+                >
+                  Gold
+                </option>
+                <option
+                  value="ring"
+                >
+                  Ring
+                </option>
+              </select>
+              <div
+                class="chakra-select__icon-wrapper css-162mkon"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="chakra-select__icon"
+                  focusable="false"
+                  role="presentation"
+                  style="width: 1em; height: 1em; color: currentColor;"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </label>
+        </div>
+      </div>
+      <div
+        class="chakra-form-control css-3qdq65"
+        role="group"
+      >
+        <label
+          class="chakra-form__label css-1gtigks"
+          for="name"
+          id="field-:r8:-label"
+        >
+          Brand
+        </label>
+        <input
+          class="chakra-input css-0"
+          data-testid="input-brand"
+          id="brand"
+          name="product.brand"
+          placeholder="Enter Brand..."
+        />
+      </div>
+    </div>
+  </div>
+  <footer
+    class="chakra-modal__footer css-1t7v26l"
+  >
+    <button
+      class="chakra-button css-168qeg6"
+      data-testid="click-to-close"
+      type="button"
+    >
+      Cancel
+    </button>
+    <button
+      class="chakra-button css-1jitvwb"
+      data-testid="click-confirm"
+      disabled=""
+      style="cursor: not-allowed;"
+      type="button"
+    >
+      Confirm
+    </button>
+  </footer>
+</section>
+`;
