@@ -7,7 +7,7 @@ import ProductModal from '.';
 import { MOCKED_PRODUCT_VALUE_DEFAULT } from '@constants';
 
 // Code
-import { Edit } from './ProductModal.code';
+import { asEdit, asDefault } from './ProductModal.code';
 
 export default {
   title: 'Components/modals/ProductModal',
@@ -48,7 +48,7 @@ Edit.args = {
 };
 Edit.parameters = {
   componentSource: {
-    code: Edit,
+    code: asEdit,
     language: 'typescript'
   }
 };

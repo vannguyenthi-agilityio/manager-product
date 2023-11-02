@@ -11,7 +11,7 @@ import MOCKED_PRODUCT_VALUE_DEFAULT from '@constants/mocks/product';
   product={MOCKED_PRODUCT_VALUE_DEFAULT} />
 `;
 
-export const Edit = `
+export const asEdit = `
 import ProductModal from '@components/modals/create';
 import MOCKED_PRODUCT_VALUE_DEFAULT from '@constants/mocks/product';
 
