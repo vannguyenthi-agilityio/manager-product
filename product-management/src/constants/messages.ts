@@ -1,4 +1,4 @@
-export const MESSAGES = {
+export const MESSAGES_ERROR = {
   EMPTY: 'No data found!',
   EMPTY_FILED: 'Please fill in this field!',
   FAIL_TO_FETCH: 'Something went wrong!! Please reload page.',
@@ -8,5 +8,7 @@ export const MESSAGES = {
   REMOVE_PRODUCT_FAIL: 'Remove product fail!',
   UPDATE_PRODUCT_SUCCESS: 'Add product success!',
   UPDATE_PRODUCT_FAIL: 'Update product fail!',
-  EXIST_PRODUCT: 'Product already exist'
+  EXIST_PRODUCT: 'Product already exist',
+  NAME_MIN_LENGTH: 'Minimum length should be 4',
+  NUMBER_REQUIRED: 'Please enter a number'
 };

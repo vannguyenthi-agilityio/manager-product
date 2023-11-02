@@ -1,0 +1,235 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product Form Component should render correctly 1`] = `
+<div
+  class="css-0"
+  data-testid="form-detail"
+>
+  <div
+    class="css-6jf9kx"
+    data-testid="form-product"
+  >
+    <div
+      class="chakra-form-control css-3qdq65"
+      role="group"
+    >
+      <label
+        class="chakra-form__label css-1gtigks"
+        for="name"
+        id="field-:r0:-label"
+      >
+        Name
+      </label>
+      <input
+        class="chakra-input css-0"
+        data-testid="input-name"
+        id="name"
+        name="product.name"
+        placeholder="Enter Name..."
+      />
+    </div>
+    <div
+      class="chakra-form-control css-3qdq65"
+      role="group"
+    >
+      <label
+        class="chakra-form__label css-1gtigks"
+        for="quantity"
+        id="field-:r1:-label"
+      >
+        Quantity
+      </label>
+      <input
+        class="chakra-input css-0"
+        data-testid="input-quantity"
+        id="quantity"
+        name="product.quantity"
+        placeholder="Quantity"
+      />
+    </div>
+    <div
+      class="chakra-form-control css-3qdq65"
+      role="group"
+    >
+      <label
+        class="chakra-form__label css-1gtigks"
+        for="price"
+        id="field-:r2:-label"
+      >
+        Price
+      </label>
+      <input
+        class="chakra-input css-0"
+        data-testid="input-price"
+        id="price"
+        name="product.price"
+        placeholder="Price"
+      />
+    </div>
+    <div
+      class="chakra-stack css-1y87ypt"
+    >
+      <div
+        class="chakra-form-control css-1ryeq9i"
+        role="group"
+      >
+        <label
+          class="chakra-form__label css-1gtigks"
+          for="status"
+          id="field-:r3:-label"
+        >
+          Status
+        </label>
+        <label>
+          <div
+            class="chakra-select__wrapper css-42b2qy"
+          >
+            <select
+              class="chakra-select css-1ik61og"
+              data-testid="select"
+              id="status"
+              name="product.status"
+            >
+              <option
+                selected=""
+                value="available"
+              >
+                Available
+              </option>
+              <option
+                value="sold_out"
+              >
+                Sold out
+              </option>
+            </select>
+            <div
+              class="chakra-select__icon-wrapper css-162mkon"
+            >
+              <svg
+                aria-hidden="true"
+                class="chakra-select__icon"
+                focusable="false"
+                role="presentation"
+                style="width: 1em; height: 1em; color: currentColor;"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </div>
+        </label>
+      </div>
+      <div
+        class="chakra-form-control css-tn9ygg"
+        role="group"
+      >
+        <label
+          class="chakra-form__label css-1gtigks"
+          for="status"
+          id="field-:r4:-label"
+        >
+          Types
+        </label>
+        <label>
+          <div
+            class="chakra-select__wrapper css-42b2qy"
+          >
+            <select
+              class="chakra-select css-1ik61og"
+              data-testid="select"
+              id="type"
+              name="product.types"
+            >
+              <option
+                selected=""
+                value="Gemstone"
+              >
+                Gemstone
+              </option>
+              <option
+                value="metal"
+              >
+                Metal
+              </option>
+              <option
+                value="diamond"
+              >
+                Diamond
+              </option>
+              <option
+                value="gold"
+              >
+                Gold
+              </option>
+              <option
+                value="ring"
+              >
+                Ring
+              </option>
+            </select>
+            <div
+              class="chakra-select__icon-wrapper css-162mkon"
+            >
+              <svg
+                aria-hidden="true"
+                class="chakra-select__icon"
+                focusable="false"
+                role="presentation"
+                style="width: 1em; height: 1em; color: currentColor;"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+    <div
+      class="chakra-form-control css-3qdq65"
+      role="group"
+    >
+      <label
+        class="chakra-form__label css-1gtigks"
+        for="name"
+        id="field-:r5:-label"
+      >
+        Brand
+      </label>
+      <input
+        class="chakra-input css-0"
+        data-testid="input-brand"
+        id="brand"
+        name="product.brand"
+        placeholder="Enter Brand..."
+      />
+    </div>
+  </div>
+  <div
+    class="chakra-stack css-1y87ypt"
+  >
+    <button
+      class="chakra-button css-168qeg6"
+      data-testid="click-to-home"
+      type="button"
+    >
+      Back
+    </button>
+    <button
+      class="chakra-button css-1jitvwb"
+      data-testid="click-save"
+      disabled=""
+      style="cursor: not-allowed;"
+      type="button"
+    >
+      Save
+    </button>
+  </div>
+</div>
+`;

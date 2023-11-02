@@ -55,7 +55,8 @@ export enum PRODUCT_TYPE {
   GEMSTONE = 'Gemstone',
   METAL = 'metal',
   DIAMOND = 'diamond',
-  GOLD = 'gold'
+  GOLD = 'gold',
+  RING = 'ring'
 }
 
 export enum STATUS {
