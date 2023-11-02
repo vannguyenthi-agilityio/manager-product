@@ -16,7 +16,9 @@
     "pre-commit-lint": "npx lint-staged"
   },
   "dependencies": {
+    "@chakra-ui/anatomy": "^2.2.1",
     "@chakra-ui/react": "^2.8.1",
+    "@chakra-ui/styled-system": "^2.9.1",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "axios": "^1.6.0",
@@ -31,6 +33,7 @@
   "devDependencies": {
     "@commitlint/cli": "^18.2.0",
     "@commitlint/config-conventional": "^18.1.0",
+    "@storybook/addon-actions": "^7.5.2",
     "@storybook/addon-essentials": "^7.5.1",
     "@storybook/addon-interactions": "^7.5.1",
     "@storybook/addon-links": "^7.5.1",

@@ -4,16 +4,16 @@ import { Icon } from '@chakra-ui/react';
 export const DeleteIcon = () => {
   return (
     <Icon
-      width='56'
-      height='56'
+      width='56px'
+      height='56px'
       viewBox='0 0 56 56'
       fill='none'
     >
       <rect
         x='4'
         y='4'
-        width='48'
-        height='48'
+        width='48px'
+        height='48px'
         rx='24'
         fill='#FEE4E2'
       />
@@ -27,8 +27,8 @@ export const DeleteIcon = () => {
       <rect
         x='4'
         y='4'
-        width='48'
-        height='48'
+        width='48px'
+        height='48px'
         rx='24'
         stroke='#FEF3F2'
         strokeWidth='8'
