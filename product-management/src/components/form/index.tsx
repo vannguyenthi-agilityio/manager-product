@@ -81,6 +81,7 @@ export const FormProduct: FC<IFormProductProps> = ({ register, formState }) => {
         </FormLabel>
         <Input
           id='quantity'
+          type='number'
           placeholder='Quantity'
           {...register('product.quantity', {
             required: '',
@@ -109,6 +110,7 @@ export const FormProduct: FC<IFormProductProps> = ({ register, formState }) => {
         </FormLabel>
         <Input
           id='price'
+          type='number'
           placeholder='Price'
           {...register('product.price', {
             required: '',

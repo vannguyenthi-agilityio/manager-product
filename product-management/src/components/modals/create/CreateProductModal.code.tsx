@@ -1,12 +1,12 @@
 export const asDefault = `
-import FormDetail from '@components/form/detail';
+import CreateProductModal from '@components/modals/create';
 import MOCKED_PRODUCT_VALUE_DEFAULT from '@constants/mocks/product';
 
 /**
- * The used to render FormDetail component.
+ * The used to render CreateProductModal component.
  *
  */
 
-<FormDetail
+<CreateProductModal
   product={MOCKED_PRODUCT_VALUE_DEFAULT} />
 `;

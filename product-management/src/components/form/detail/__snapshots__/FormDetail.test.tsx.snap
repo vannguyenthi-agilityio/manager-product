@@ -45,6 +45,7 @@ exports[`Product Form Component should render correctly 1`] = `
         id="quantity"
         name="product.quantity"
         placeholder="Quantity"
+        type="number"
       />
     </div>
     <div
@@ -64,6 +65,7 @@ exports[`Product Form Component should render correctly 1`] = `
         id="price"
         name="product.price"
         placeholder="Price"
+        type="number"
       />
     </div>
     <div
