@@ -56,8 +56,9 @@ const CreateProductModal = ({ isOpen = true, onClose, onClick, product }: ICreat
     isEmptyQuantity;
 
   const onSubmit = (data: IFormProductProps) => {
+    // TODO: will integration data
     onClick();
-    console.log('111', data);
+    console.log(data);
   };
 
   const { isSubmitting } = formState;
