@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // constants
-import { MESSAGES } from '@constants';
+import { MESSAGES_ERROR } from '@constants';
 
 // types
 import { Product } from '@types';
@@ -25,7 +25,7 @@ export const getProductById = async (id: string): Promise<Product | null> => {
 
     return response.data;
   } catch (error) {
-    throw new Error(MESSAGES.FAIL_TO_FETCH);
+    throw new Error(MESSAGES_ERROR.FAIL_TO_FETCH);
   }
 };
 
@@ -37,6 +37,6 @@ export const getProducts = async (): Promise<Product[]> => {
 
     return response.data;
   } catch (error) {
-    throw new Error(MESSAGES.FAIL_TO_FETCH);
+    throw new Error(MESSAGES_ERROR.FAIL_TO_FETCH);
   }
 };

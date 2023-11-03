@@ -24,6 +24,7 @@ export const convertPxToRem = (pxValue: number) => {
  * @returns {boolean} true if empty, otherwise false
  */
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const isEmpty = (value: any): value is null | undefined | '' => {
   return (
     value === null || // check for null
@@ -52,3 +53,10 @@ export const convertStringToCapitalize = (value: string) => {
     })
     .join(' ');
 };
+
+// Format the price above to USD using the locale, style, and currency.
+export const formatCurrencyUSD = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+  useGrouping: true
+});

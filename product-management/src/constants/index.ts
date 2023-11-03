@@ -4,3 +4,4 @@ export * from './enums';
 export * from './variants';
 export * from './regex';
 export * from './mocks/product';
+export * from './mocks/table';

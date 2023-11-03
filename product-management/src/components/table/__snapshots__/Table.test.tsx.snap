@@ -1,0 +1,1031 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table render should render Table component 1`] = `
+<table
+  class="chakra-table css-0"
+  data-testid="product-table"
+>
+  <thead
+    class="css-13rbvqk"
+  >
+    <tr
+      class="css-0"
+    >
+      <th
+        class="css-rm0brf"
+      >
+        <div
+          class="css-j7qwjs"
+        >
+          Name
+          <input
+            class="chakra-input css-0"
+            placeholder="Search"
+          />
+        </div>
+      </th>
+      <th
+        class="css-rm0brf"
+      >
+        <div
+          class="css-j7qwjs"
+        >
+          Status
+          <div
+            class="css-q2ms4q"
+          >
+            <label>
+              <div
+                class="chakra-select__wrapper css-42b2qy"
+              >
+                <select
+                  class="chakra-select css-1ik61og"
+                  data-testid="select"
+                >
+                  <option
+                    value=""
+                  >
+                    All
+                  </option>
+                  <option
+                    value="available"
+                  >
+                    Available
+                  </option>
+                  <option
+                    value="sold_out"
+                  >
+                    Sold out
+                  </option>
+                </select>
+                <div
+                  class="chakra-select__icon-wrapper css-162mkon"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="chakra-select__icon"
+                    focusable="false"
+                    role="presentation"
+                    style="width: 1em; height: 1em; color: currentColor;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+      </th>
+      <th
+        class="css-rm0brf"
+      >
+        <div
+          class="css-j7qwjs"
+        >
+          Type
+          <div
+            class="css-q2ms4q"
+          >
+            <label>
+              <div
+                class="chakra-select__wrapper css-42b2qy"
+              >
+                <select
+                  class="chakra-select css-1ik61og"
+                  data-testid="select"
+                >
+                  <option
+                    value=""
+                  >
+                    All
+                  </option>
+                  <option
+                    value="Gemstone"
+                  >
+                    Gemstone
+                  </option>
+                  <option
+                    value="metal"
+                  >
+                    Metal
+                  </option>
+                  <option
+                    value="diamond"
+                  >
+                    Diamond
+                  </option>
+                  <option
+                    value="gold"
+                  >
+                    Gold
+                  </option>
+                  <option
+                    value="ring"
+                  >
+                    Ring
+                  </option>
+                </select>
+                <div
+                  class="chakra-select__icon-wrapper css-162mkon"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="chakra-select__icon"
+                    focusable="false"
+                    role="presentation"
+                    style="width: 1em; height: 1em; color: currentColor;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+      </th>
+      <th
+        class="css-rm0brf"
+      >
+        <div
+          class="css-j7qwjs"
+        >
+          Quantily
+          <input
+            class="chakra-input css-0"
+            placeholder="Search"
+          />
+        </div>
+      </th>
+      <th
+        class="css-rm0brf"
+      >
+        <div
+          class="css-j7qwjs"
+        >
+          Brand
+          <input
+            class="chakra-input css-0"
+            placeholder="Search"
+          />
+        </div>
+      </th>
+      <th
+        class="css-rm0brf"
+      >
+        <div
+          class="css-j7qwjs"
+        >
+          Price
+          <input
+            class="chakra-input css-0"
+            placeholder="Search"
+          />
+        </div>
+      </th>
+      <th
+        class="css-vh7bht"
+      >
+        <div
+          class="css-j7qwjs"
+        >
+          Action
+        </div>
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    class="css-0"
+  >
+    <tr
+      class="css-0"
+    >
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+        >
+          1
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+        >
+          Louis vuitton
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <button
+          class="chakra-button css-4xx2wk"
+          type="button"
+        >
+          Available
+        </button>
+      </td>
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+        >
+          Ring
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+          style="border: 1px solid #dfe2e9; border-radius: 8px; text-align: center; width: 56px;"
+        >
+          9177
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+        >
+          Evan flores
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+        >
+          $452.85
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <div
+          class="css-1l4w6pd"
+        >
+          <button
+            aria-controls="menu-list-:r1:"
+            aria-expanded="false"
+            aria-haspopup="menu"
+            class="chakra-menu__menu-button css-1eqi7qs"
+            id="menu-button-:r1:"
+          >
+            <span
+              class="css-xl71ch"
+            >
+              <div
+                class="css-1u4cqe9"
+              >
+                <p
+                  class="chakra-text css-1vtejss"
+                />
+                <p
+                  class="chakra-text css-18vkfhs"
+                />
+                <p
+                  class="chakra-text css-1vtejss"
+                />
+              </div>
+            </span>
+          </button>
+          <div
+            class="css-0"
+            style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+          >
+            <div
+              aria-orientation="vertical"
+              class="chakra-menu__menu-list css-sjt5nk"
+              id="menu-list-:r1:"
+              role="menu"
+              style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.8) translateZ(0);"
+              tabindex="-1"
+            >
+              <button
+                class="chakra-menu__menuitem css-1k756t9"
+                data-index="0"
+                id="menu-list-:r1:-menuitem-:r2:"
+                role="menuitem"
+                tabindex="-1"
+                type="button"
+              >
+                Edit
+              </button>
+              <button
+                class="chakra-menu__menuitem css-1jf287i"
+                data-index="1"
+                id="menu-list-:r1:-menuitem-:r3:"
+                role="menuitem"
+                tabindex="-1"
+                type="button"
+              >
+                 
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr
+      class="css-0"
+    >
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+        >
+          2
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+        >
+          Johnson & johnson
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <button
+          class="chakra-button css-4xx2wk"
+          type="button"
+        >
+          Sold out
+        </button>
+      </td>
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+        >
+          Diamond
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+          style="border: 1px solid #dfe2e9; border-radius: 8px; text-align: center; width: 56px;"
+        >
+          3064
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+        >
+          Arlene wilson
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+        >
+          $901.35
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <div
+          class="css-1l4w6pd"
+        >
+          <button
+            aria-controls="menu-list-:r5:"
+            aria-expanded="false"
+            aria-haspopup="menu"
+            class="chakra-menu__menu-button css-1eqi7qs"
+            id="menu-button-:r5:"
+          >
+            <span
+              class="css-xl71ch"
+            >
+              <div
+                class="css-1u4cqe9"
+              >
+                <p
+                  class="chakra-text css-1vtejss"
+                />
+                <p
+                  class="chakra-text css-18vkfhs"
+                />
+                <p
+                  class="chakra-text css-1vtejss"
+                />
+              </div>
+            </span>
+          </button>
+          <div
+            class="css-0"
+            style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+          >
+            <div
+              aria-orientation="vertical"
+              class="chakra-menu__menu-list css-sjt5nk"
+              id="menu-list-:r5:"
+              role="menu"
+              style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.8) translateZ(0);"
+              tabindex="-1"
+            >
+              <button
+                class="chakra-menu__menuitem css-1k756t9"
+                data-index="0"
+                id="menu-list-:r5:-menuitem-:r6:"
+                role="menuitem"
+                tabindex="-1"
+                type="button"
+              >
+                Edit
+              </button>
+              <button
+                class="chakra-menu__menuitem css-1jf287i"
+                data-index="1"
+                id="menu-list-:r5:-menuitem-:r7:"
+                role="menuitem"
+                tabindex="-1"
+                type="button"
+              >
+                 
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr
+      class="css-0"
+    >
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+        >
+          3
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+        >
+          Starbuks
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <button
+          class="chakra-button css-4xx2wk"
+          type="button"
+        >
+          Sold out
+        </button>
+      </td>
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+        >
+          Gemstone
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+          style="border: 1px solid #dfe2e9; border-radius: 8px; text-align: center; width: 56px;"
+        >
+          9195
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+        >
+          Jennie cooper
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+        >
+          $641.20
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <div
+          class="css-1l4w6pd"
+        >
+          <button
+            aria-controls="menu-list-:r9:"
+            aria-expanded="false"
+            aria-haspopup="menu"
+            class="chakra-menu__menu-button css-1eqi7qs"
+            id="menu-button-:r9:"
+          >
+            <span
+              class="css-xl71ch"
+            >
+              <div
+                class="css-1u4cqe9"
+              >
+                <p
+                  class="chakra-text css-1vtejss"
+                />
+                <p
+                  class="chakra-text css-18vkfhs"
+                />
+                <p
+                  class="chakra-text css-1vtejss"
+                />
+              </div>
+            </span>
+          </button>
+          <div
+            class="css-0"
+            style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+          >
+            <div
+              aria-orientation="vertical"
+              class="chakra-menu__menu-list css-sjt5nk"
+              id="menu-list-:r9:"
+              role="menu"
+              style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.8) translateZ(0);"
+              tabindex="-1"
+            >
+              <button
+                class="chakra-menu__menuitem css-1k756t9"
+                data-index="0"
+                id="menu-list-:r9:-menuitem-:ra:"
+                role="menuitem"
+                tabindex="-1"
+                type="button"
+              >
+                Edit
+              </button>
+              <button
+                class="chakra-menu__menuitem css-1jf287i"
+                data-index="1"
+                id="menu-list-:r9:-menuitem-:rb:"
+                role="menuitem"
+                tabindex="-1"
+                type="button"
+              >
+                 
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr
+      class="css-0"
+    >
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+        >
+          4
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+        >
+          The walt disney
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <button
+          class="chakra-button css-4xx2wk"
+          type="button"
+        >
+          Available
+        </button>
+      </td>
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+        >
+          Metal
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+          style="border: 1px solid #dfe2e9; border-radius: 8px; text-align: center; width: 56px;"
+        >
+          3128
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+        >
+          Philip steward
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+        >
+          $510.30
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <div
+          class="css-1l4w6pd"
+        >
+          <button
+            aria-controls="menu-list-:rd:"
+            aria-expanded="false"
+            aria-haspopup="menu"
+            class="chakra-menu__menu-button css-1eqi7qs"
+            id="menu-button-:rd:"
+          >
+            <span
+              class="css-xl71ch"
+            >
+              <div
+                class="css-1u4cqe9"
+              >
+                <p
+                  class="chakra-text css-1vtejss"
+                />
+                <p
+                  class="chakra-text css-18vkfhs"
+                />
+                <p
+                  class="chakra-text css-1vtejss"
+                />
+              </div>
+            </span>
+          </button>
+          <div
+            class="css-0"
+            style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+          >
+            <div
+              aria-orientation="vertical"
+              class="chakra-menu__menu-list css-sjt5nk"
+              id="menu-list-:rd:"
+              role="menu"
+              style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.8) translateZ(0);"
+              tabindex="-1"
+            >
+              <button
+                class="chakra-menu__menuitem css-1k756t9"
+                data-index="0"
+                id="menu-list-:rd:-menuitem-:re:"
+                role="menuitem"
+                tabindex="-1"
+                type="button"
+              >
+                Edit
+              </button>
+              <button
+                class="chakra-menu__menuitem css-1jf287i"
+                data-index="1"
+                id="menu-list-:rd:-menuitem-:rf:"
+                role="menuitem"
+                tabindex="-1"
+                type="button"
+              >
+                 
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr
+      class="css-0"
+    >
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+        >
+          5
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+        >
+          Mitsubishi
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <button
+          class="chakra-button css-4xx2wk"
+          type="button"
+        >
+          Available
+        </button>
+      </td>
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+        >
+          Ring
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+          style="border: 1px solid #dfe2e9; border-radius: 8px; text-align: center; width: 56px;"
+        >
+          9892
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+        >
+          Jorge black
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+        >
+          $510.30
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <div
+          class="css-1l4w6pd"
+        >
+          <button
+            aria-controls="menu-list-:rh:"
+            aria-expanded="false"
+            aria-haspopup="menu"
+            class="chakra-menu__menu-button css-1eqi7qs"
+            id="menu-button-:rh:"
+          >
+            <span
+              class="css-xl71ch"
+            >
+              <div
+                class="css-1u4cqe9"
+              >
+                <p
+                  class="chakra-text css-1vtejss"
+                />
+                <p
+                  class="chakra-text css-18vkfhs"
+                />
+                <p
+                  class="chakra-text css-1vtejss"
+                />
+              </div>
+            </span>
+          </button>
+          <div
+            class="css-0"
+            style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+          >
+            <div
+              aria-orientation="vertical"
+              class="chakra-menu__menu-list css-sjt5nk"
+              id="menu-list-:rh:"
+              role="menu"
+              style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.8) translateZ(0);"
+              tabindex="-1"
+            >
+              <button
+                class="chakra-menu__menuitem css-1k756t9"
+                data-index="0"
+                id="menu-list-:rh:-menuitem-:ri:"
+                role="menuitem"
+                tabindex="-1"
+                type="button"
+              >
+                Edit
+              </button>
+              <button
+                class="chakra-menu__menuitem css-1jf287i"
+                data-index="1"
+                id="menu-list-:rh:-menuitem-:rj:"
+                role="menuitem"
+                tabindex="-1"
+                type="button"
+              >
+                 
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr
+      class="css-0"
+    >
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+        >
+          6
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+        >
+          Ibm
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <button
+          class="chakra-button css-4xx2wk"
+          type="button"
+        >
+          Sold out
+        </button>
+      </td>
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+        >
+          Gold
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+          style="border: 1px solid #dfe2e9; border-radius: 8px; text-align: center; width: 56px;"
+        >
+          9011
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+        >
+          Gladys jones
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-m50rwi"
+        >
+          $845.59
+        </p>
+      </td>
+      <td
+        class="css-0"
+      >
+        <div
+          class="css-1l4w6pd"
+        >
+          <button
+            aria-controls="menu-list-:rl:"
+            aria-expanded="false"
+            aria-haspopup="menu"
+            class="chakra-menu__menu-button css-1eqi7qs"
+            id="menu-button-:rl:"
+          >
+            <span
+              class="css-xl71ch"
+            >
+              <div
+                class="css-1u4cqe9"
+              >
+                <p
+                  class="chakra-text css-1vtejss"
+                />
+                <p
+                  class="chakra-text css-18vkfhs"
+                />
+                <p
+                  class="chakra-text css-1vtejss"
+                />
+              </div>
+            </span>
+          </button>
+          <div
+            class="css-0"
+            style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+          >
+            <div
+              aria-orientation="vertical"
+              class="chakra-menu__menu-list css-sjt5nk"
+              id="menu-list-:rl:"
+              role="menu"
+              style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.8) translateZ(0);"
+              tabindex="-1"
+            >
+              <button
+                class="chakra-menu__menuitem css-1k756t9"
+                data-index="0"
+                id="menu-list-:rl:-menuitem-:rm:"
+                role="menuitem"
+                tabindex="-1"
+                type="button"
+              >
+                Edit
+              </button>
+              <button
+                class="chakra-menu__menuitem css-1jf287i"
+                data-index="1"
+                id="menu-list-:rl:-menuitem-:rn:"
+                role="menuitem"
+                tabindex="-1"
+                type="button"
+              >
+                 
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
