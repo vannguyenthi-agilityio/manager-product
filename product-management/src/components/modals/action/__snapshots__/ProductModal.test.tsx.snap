@@ -189,6 +189,16 @@ exports[`ProductModal component with Snapshot should render correctly 1`] = `
                 >
                   Ring
                 </option>
+                <option
+                  value="Bravo"
+                >
+                  Bravo
+                </option>
+                <option
+                  value="Alfa"
+                >
+                  Alfa
+                </option>
               </select>
               <div
                 class="chakra-select__icon-wrapper css-162mkon"

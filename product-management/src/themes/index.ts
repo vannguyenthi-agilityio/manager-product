@@ -12,7 +12,6 @@ import modalTheme from './components/modal';
 import tableTheme from './components/table';
 import menuTheme from './components/menu';
 
-import { COLORS } from '@constants';
 import CUSTOM_FONTS from './fonts';
 import CUSTOM_SHADOWS from './shadows';
 import CUSTOM_RADIUS from './radius';
@@ -35,7 +34,6 @@ const CHAKRA_THEME = {
   styles: {
     global: {
       'html, body': {
-        background: `${COLORS.GREY}.10`,
         fontFamily: 'body'
       }
     }
