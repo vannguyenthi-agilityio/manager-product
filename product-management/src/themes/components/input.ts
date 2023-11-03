@@ -9,8 +9,23 @@ const inputTheme = {
     default: {
       field: {
         fontWeight: 'normal',
-        lineHeight: `${convertPxToRem(17)}`,
-        fontSize: 'sm'
+        lineHeight: convertPxToRem(17),
+        fontSize: 'sm',
+        h: convertPxToRem(44),
+        px: convertPxToRem(20)
+      }
+    },
+    xs: {
+      field: {
+        fontWeight: 'normal',
+        lineHeight: convertPxToRem(17),
+        fontSize: 'sm',
+        px: convertPxToRem(5),
+        w: convertPxToRem(50),
+        h: convertPxToRem(30),
+        _placeholder: {
+          color: `${COLORS.GREY}.600`
+        }
       }
     }
   },
@@ -26,8 +41,6 @@ const inputTheme = {
   },
   baseStyle: {
     field: {
-      px: convertPxToRem(20),
-      h: convertPxToRem(44),
       _placeholder: {
         color: `${COLORS.GREY}.250`,
         opacity: '0.5'

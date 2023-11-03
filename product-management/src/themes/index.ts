@@ -9,6 +9,8 @@ import buttonTheme from './components/button';
 import selectTheme from './components/select';
 import inputTheme from './components/input';
 import modalTheme from './components/modal';
+import tableTheme from './components/table';
+import menuTheme from './components/menu';
 
 import { COLORS } from '@constants';
 import CUSTOM_FONTS from './fonts';
@@ -21,7 +23,9 @@ const CHAKRA_THEME = {
       Button: buttonTheme,
       Select: selectTheme,
       Input: inputTheme,
-      Modal: modalTheme
+      Modal: modalTheme,
+      Table: tableTheme,
+      Menu: menuTheme
     },
     colors: CUSTOM_COLORS_PALETTE,
     fonts: CUSTOM_FONTS,

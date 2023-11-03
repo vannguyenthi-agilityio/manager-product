@@ -12,7 +12,7 @@ const selectTheme = {
         lineHeight: convertPxToRem(17),
         fontWeight: 'normal',
         pl: convertPxToRem(15),
-        h: `${convertPxToRem(44)}`,
+        h: convertPxToRem(44),
         '&.selected': {
           color: `${COLORS.BLACK}`,
           opacity: '1'
@@ -25,7 +25,17 @@ const selectTheme = {
         lineHeight: convertPxToRem(17),
         fontWeight: 'normal',
         pl: convertPxToRem(15),
-        h: `${convertPxToRem(44)}`
+        h: convertPxToRem(44)
+      }
+    },
+    xs: {
+      field: {
+        fontSize: 'sm',
+        lineHeight: convertPxToRem(17),
+        fontWeight: 'normal',
+        pl: convertPxToRem(0),
+        h: convertPxToRem(30),
+        w: convertPxToRem(60)
       }
     }
   },
