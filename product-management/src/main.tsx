@@ -9,7 +9,7 @@ import CHAKRA_THEME from '@themes/index';
 // Font family
 import Fonts from '@components/fonts';
 
-import Router from '@router';
+import Router from '@router/index';
 
 // Styles
 import 'src/styles/App.css';
