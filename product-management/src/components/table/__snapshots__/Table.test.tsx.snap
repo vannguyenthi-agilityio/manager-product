@@ -128,6 +128,16 @@ exports[`Table render should render Table component 1`] = `
                   >
                     Ring
                   </option>
+                  <option
+                    value="Bravo"
+                  >
+                    Bravo
+                  </option>
+                  <option
+                    value="Alfa"
+                  >
+                    Alfa
+                  </option>
                 </select>
                 <div
                   class="chakra-select__icon-wrapper css-162mkon"
@@ -211,7 +221,7 @@ exports[`Table render should render Table component 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-m50rwi"
+          class="chakra-text css-fuwb12"
         >
           1
         </p>
@@ -239,7 +249,7 @@ exports[`Table render should render Table component 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-m50rwi"
+          class="chakra-text css-fuwb12"
         >
           Ring
         </p>
@@ -258,7 +268,7 @@ exports[`Table render should render Table component 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-m50rwi"
+          class="chakra-text css-fuwb12"
         >
           Evan flores
         </p>
@@ -348,7 +358,7 @@ exports[`Table render should render Table component 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-m50rwi"
+          class="chakra-text css-fuwb12"
         >
           2
         </p>
@@ -376,7 +386,7 @@ exports[`Table render should render Table component 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-m50rwi"
+          class="chakra-text css-fuwb12"
         >
           Diamond
         </p>
@@ -395,7 +405,7 @@ exports[`Table render should render Table component 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-m50rwi"
+          class="chakra-text css-fuwb12"
         >
           Arlene wilson
         </p>
@@ -485,7 +495,7 @@ exports[`Table render should render Table component 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-m50rwi"
+          class="chakra-text css-fuwb12"
         >
           3
         </p>
@@ -513,7 +523,7 @@ exports[`Table render should render Table component 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-m50rwi"
+          class="chakra-text css-fuwb12"
         >
           Gemstone
         </p>
@@ -532,7 +542,7 @@ exports[`Table render should render Table component 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-m50rwi"
+          class="chakra-text css-fuwb12"
         >
           Jennie cooper
         </p>
@@ -622,7 +632,7 @@ exports[`Table render should render Table component 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-m50rwi"
+          class="chakra-text css-fuwb12"
         >
           4
         </p>
@@ -650,7 +660,7 @@ exports[`Table render should render Table component 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-m50rwi"
+          class="chakra-text css-fuwb12"
         >
           Metal
         </p>
@@ -669,7 +679,7 @@ exports[`Table render should render Table component 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-m50rwi"
+          class="chakra-text css-fuwb12"
         >
           Philip steward
         </p>
@@ -759,7 +769,7 @@ exports[`Table render should render Table component 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-m50rwi"
+          class="chakra-text css-fuwb12"
         >
           5
         </p>
@@ -787,7 +797,7 @@ exports[`Table render should render Table component 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-m50rwi"
+          class="chakra-text css-fuwb12"
         >
           Ring
         </p>
@@ -806,7 +816,7 @@ exports[`Table render should render Table component 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-m50rwi"
+          class="chakra-text css-fuwb12"
         >
           Jorge black
         </p>
@@ -896,7 +906,7 @@ exports[`Table render should render Table component 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-m50rwi"
+          class="chakra-text css-fuwb12"
         >
           6
         </p>
@@ -924,7 +934,7 @@ exports[`Table render should render Table component 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-m50rwi"
+          class="chakra-text css-fuwb12"
         >
           Gold
         </p>
@@ -943,7 +953,7 @@ exports[`Table render should render Table component 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-m50rwi"
+          class="chakra-text css-fuwb12"
         >
           Gladys jones
         </p>

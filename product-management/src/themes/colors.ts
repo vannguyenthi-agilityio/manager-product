@@ -112,6 +112,7 @@ const CUSTOM_COLORS_PALETTE = {
   },
 
   black: {
+    200: '#0C0033',
     500: '#00072b',
     550: '#667085'
   }

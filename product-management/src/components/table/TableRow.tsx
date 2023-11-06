@@ -56,7 +56,7 @@ export const TableRow = ({ data = [], filteredItems = [], ...props }: TableRowPr
         return (
           <Button
             size='xs'
-            colorScheme={value === 'available' ? 'mania' : 'red'}
+            colorScheme={convertStringToCapitalize(value) === 'Available' ? 'mania' : 'red'}
           >
             {convertStringToCapitalize(value === PRODUCT_STATUS.SOLD_OUT ? 'Sold Out' : value)}
           </Button>
@@ -85,6 +85,7 @@ export const TableRow = ({ data = [], filteredItems = [], ...props }: TableRowPr
           <Text
             fontSize='sm'
             fontWeight='normal'
+            textAlign={{ sm: 'center', md: 'left' }}
           >
             {convertStringToCapitalize(value)}
           </Text>
