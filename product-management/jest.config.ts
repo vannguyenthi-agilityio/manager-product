@@ -7,10 +7,11 @@ export default {
     '^@pages/(.*)': '<rootDir>/src/pages/index',
     '^@themes/(.*)': '<rootDir>/src/themes/$1',
     '^@constants': '<rootDir>/src/constants/index',
-    '^@contexts': '<rootDir>/src/contexts/index',
+    '^@contexts/(.*)': '<rootDir>/src/contexts/$1',
+    '^@services/(.*)': '<rootDir>/src/services/$1',
     '^@utils/(.*)': '<rootDir>/src/utils/$1',
     '^@assets': '<rootDir>/src/assets',
-    '^@hooks': '<rootDir>/src/hooks/index',
+    '^@hooks/(.*)': '<rootDir>/src/hooks/$1',
     '^.+\\.svg$': 'jest-svg-transformer',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
   },
