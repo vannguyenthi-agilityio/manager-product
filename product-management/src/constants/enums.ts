@@ -52,16 +52,17 @@ export enum PRODUCT_STATUS {
 }
 
 export enum PRODUCT_TYPE {
-  GEMSTONE = 'Gemstone',
+  GEMSTONE = 'gemstone',
   METAL = 'metal',
   DIAMOND = 'diamond',
   GOLD = 'gold',
   RING = 'ring',
-  BRAVO = 'Bravo',
-  ALFA = 'Alfa'
+  BRAVO = 'bravo',
+  ALFA = 'alfa'
 }
 
-export enum STATUS {
+export enum POPUP_STATUS {
+  WARNING = 'warning',
   SUCCESS = 'success',
   ERROR = 'error'
 }
@@ -69,4 +70,11 @@ export enum STATUS {
 export enum SORT_TYPE {
   ASC = 'price_asc',
   DESC = 'price_desc'
+}
+
+export enum FETCH_STATUS {
+  INIT,
+  LOADING,
+  SUCCESS,
+  ERROR
 }
