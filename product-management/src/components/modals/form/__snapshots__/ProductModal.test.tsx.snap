@@ -44,6 +44,7 @@ exports[`ProductModal component with Snapshot should render correctly 1`] = `
           id="name"
           name="product.name"
           placeholder="Enter Name..."
+          value=""
         />
       </div>
       <div
@@ -64,6 +65,7 @@ exports[`ProductModal component with Snapshot should render correctly 1`] = `
           name="product.quantity"
           placeholder="Quantity"
           type="number"
+          value=""
         />
       </div>
       <div
@@ -84,6 +86,7 @@ exports[`ProductModal component with Snapshot should render correctly 1`] = `
           name="product.price"
           placeholder="Price"
           type="number"
+          value=""
         />
       </div>
       <div
@@ -164,8 +167,12 @@ exports[`ProductModal component with Snapshot should render correctly 1`] = `
                 name="product.types"
               >
                 <option
-                  selected=""
-                  value="Gemstone"
+                  value=""
+                >
+                  gemstone
+                </option>
+                <option
+                  value="gemstone"
                 >
                   Gemstone
                 </option>
@@ -190,12 +197,12 @@ exports[`ProductModal component with Snapshot should render correctly 1`] = `
                   Ring
                 </option>
                 <option
-                  value="Bravo"
+                  value="bravo"
                 >
                   Bravo
                 </option>
                 <option
-                  value="Alfa"
+                  value="alfa"
                 >
                   Alfa
                 </option>
@@ -238,6 +245,7 @@ exports[`ProductModal component with Snapshot should render correctly 1`] = `
           id="brand"
           name="product.brand"
           placeholder="Enter Brand..."
+          value=""
         />
       </div>
     </div>

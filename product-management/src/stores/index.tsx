@@ -17,6 +17,7 @@ interface ProductState {
   getProducts: () => void;
   addNewProduct: (product: Product) => void;
   updateProduct: (product: Product) => void;
+  deleteProduct: (product: Product) => void;
 }
 
 const productStore = create<ProductState>((set) => ({

@@ -5,6 +5,9 @@ import { act } from 'react-dom/test-utils';
 // Components
 import ConfirmModal from '.';
 
+// Constants
+import { MODAL_TYPE, MODAL_STATUS } from '@constants';
+
 const onClose = jest.fn();
 const onClick = jest.fn();
 
@@ -34,7 +37,7 @@ describe('ConfirmModal component with Snapshot', () => {
 });
 
 describe('ConfirmModal component', () => {
-  test('should call onClick when click delete button', async () => {
+  test('should call onClick when close button', async () => {
     jest.useFakeTimers();
     setupDefault();
     const confirmBtn = screen.getByRole('button', { name: /Close/i });
@@ -44,13 +47,14 @@ describe('ConfirmModal component', () => {
       jest.runOnlyPendingTimers();
     });
 
-    expect(onClick).toBeCalledTimes(1);
+    expect(onClose).toBeCalledTimes(1);
   });
 });
 
 const setupDelete = (moreProps = {}) => {
   const props = {
-    type: 'delete',
+    type: MODAL_TYPE.DELETE,
+    status: MODAL_STATUS.CONFIRM,
     title: 'Delete Product',
     content: 'Are you sure you want delete this product? This action cannot be undone',
     ...baseProps,
@@ -71,6 +75,6 @@ describe('ConfirmModal component', () => {
       jest.runOnlyPendingTimers();
     });
 
-    expect(onClick).toBeCalledTimes(2);
+    expect(onClose).toBeCalledTimes(2);
   });
 });

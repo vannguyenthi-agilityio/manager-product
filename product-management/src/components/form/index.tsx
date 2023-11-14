@@ -25,7 +25,7 @@ export interface IFormProductProps {
   formState: FormState<IProductProps>;
 }
 
-export const FormProduct: FC<IFormProductProps> = ({ register, formState }) => {
+export const FormProduct: FC<IFormProductProps> = ({ register, formState, product }) => {
   const status = Object.values(PRODUCT_STATUS).map((status) => ({
     label: convertStringToCapitalize(status === PRODUCT_STATUS.SOLD_OUT ? 'Sold Out' : status),
     value: status
@@ -61,6 +61,7 @@ export const FormProduct: FC<IFormProductProps> = ({ register, formState }) => {
             required: '',
             minLength: { value: 4, message: MESSAGES_ERROR.NAME_MIN_LENGTH }
           })}
+          defaultValue={product?.name}
           data-testid='input-name'
         />
         <FormErrorMessage data-testid='error-message-input-name'>
@@ -90,6 +91,7 @@ export const FormProduct: FC<IFormProductProps> = ({ register, formState }) => {
               message: MESSAGES_ERROR.NUMBER_REQUIRED
             }
           })}
+          defaultValue={product?.quantity}
           data-testid='input-quantity'
         />
         <FormErrorMessage data-testid='error-message-input-quantity'>
@@ -120,6 +122,7 @@ export const FormProduct: FC<IFormProductProps> = ({ register, formState }) => {
             }
           })}
           data-testid='input-price'
+          defaultValue={product?.price}
         />
         <FormErrorMessage data-testid='error-message-input-price'>
           {formState?.errors?.product?.price && formState?.errors?.product?.price.message}
@@ -142,7 +145,7 @@ export const FormProduct: FC<IFormProductProps> = ({ register, formState }) => {
             id='status'
             {...register('product.status')}
             options={status}
-            defaultValue={status[0].value}
+            defaultValue={product?.status ? product?.status : status[0].value}
           />
         </FormControl>
         <FormControl maxWidth='200px'>
@@ -157,7 +160,8 @@ export const FormProduct: FC<IFormProductProps> = ({ register, formState }) => {
             id='type'
             {...register('product.types')}
             options={types}
-            defaultValue={types[0].value}
+            placeholder={product?.types ? product?.types : types[0].value}
+            defaultValue={product?.types}
           />
         </FormControl>
       </HStack>
@@ -181,6 +185,7 @@ export const FormProduct: FC<IFormProductProps> = ({ register, formState }) => {
             minLength: { value: 4, message: MESSAGES_ERROR.NAME_MIN_LENGTH }
           })}
           data-testid='input-brand'
+          defaultValue={product?.brand}
         />
         <FormErrorMessage data-testid='error-message-input-brand'>
           {formState.errors?.product?.brand && formState.errors?.product?.brand.message}
