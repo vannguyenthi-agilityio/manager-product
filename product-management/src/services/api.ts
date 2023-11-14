@@ -64,7 +64,6 @@ export const addNewProduct = async (product: Product): Promise<Product> => {
  */
 export const updateProduct = async (id: string, updatedData: Partial<Product>): Promise<Product> => {
   try {
-    console.log('updatedData', updatedData, 'id', id);
     const urlUpdateProduct = `${PRODUCTS_API}/${id}`;
     const response = await axios.put(urlUpdateProduct, updatedData, {
       headers: { 'content-type': 'application/json' }
@@ -72,5 +71,24 @@ export const updateProduct = async (id: string, updatedData: Partial<Product>): 
     return response.data;
   } catch (error) {
     throw new Error(MESSAGES_ERROR.UPDATE_PRODUCT_FAIL);
+  }
+};
+
+/**
+ * Delete a product.
+ * @param {string} id - The ID of the product to delete.
+ * @returns {Promise<Product>} - The response from the API.
+ * @throws {Error} - If there's an error deleting the product.
+ * */
+export const deleteProduct = async (id: string): Promise<Product> => {
+  try {
+    const url = `${PRODUCTS_API}/${id}`;
+    const response = await axios.delete(url, {
+      headers: { 'content-type': 'application/json' }
+    });
+
+    return response.data;
+  } catch (error) {
+    throw new Error(MESSAGES_ERROR.REMOVE_PRODUCT_FAIL);
   }
 };

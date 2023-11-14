@@ -2,18 +2,18 @@
 import { create } from 'zustand';
 
 // Constants
-import { FETCH_STATUS, MESSAGES_ERROR, MOCKED_PRODUCT_VALUE_DEFAULT } from '@constants';
+import { FETCH_STATUS, MESSAGES_ERROR } from '@constants';
 
 // types
 import { Product } from '@types';
 
 // services
-import { getProducts, addNewProduct, updateProduct } from '@services/index';
+import { getProducts, addNewProduct, updateProduct, deleteProduct } from '@services/index';
 
 interface ProductState {
   productsData: Product[];
-  newProductData: Product;
-  status: FETCH_STATUS;
+  isLoading: boolean;
+  messageError: string;
   getProducts: () => void;
   addNewProduct: (product: Product) => void;
   updateProduct: (product: Product) => void;
@@ -21,36 +21,37 @@ interface ProductState {
 
 const productStore = create<ProductState>((set) => ({
   productsData: [],
-  newProductData: MOCKED_PRODUCT_VALUE_DEFAULT,
+  isLoading: false,
+  messageError: '',
   status: FETCH_STATUS.INIT,
 
   getProducts: async () => {
+    set({ isLoading: true });
     try {
-      set({ status: FETCH_STATUS.LOADING });
       const productsData = await getProducts();
-      set({ productsData: productsData });
+      set({ productsData: productsData, isLoading: false });
     } catch (error) {
       // Handle error
-      set({ status: FETCH_STATUS.ERROR });
+      set({ isLoading: false, messageError: MESSAGES_ERROR.FAIL_TO_FETCH_API });
       throw new Error(MESSAGES_ERROR.FAIL_TO_FETCH_API);
     }
   },
 
   addNewProduct: async (product: Product) => {
+    set({ isLoading: true });
     try {
-      set({ status: FETCH_STATUS.LOADING });
       const productNewData = await addNewProduct(product);
-      set((state) => ({ ...state, productsData: [...state.productsData, productNewData] }));
+      set((state) => ({ ...state, productsData: [...state.productsData, productNewData], isLoading: false }));
     } catch (error) {
       // Handle error
-      set({ status: FETCH_STATUS.ERROR });
+      set({ isLoading: false, messageError: MESSAGES_ERROR.ADD_NEW_PRODUCT_FAIL });
       throw new Error(MESSAGES_ERROR.ADD_NEW_PRODUCT_FAIL);
     }
   },
 
   updateProduct: async (product: Product) => {
+    set({ isLoading: true });
     try {
-      set({ status: FETCH_STATUS.LOADING });
       updateProduct(product.id, product);
       set((state) => ({
         productsData: state.productsData.map((item) => {
@@ -67,12 +68,27 @@ const productStore = create<ProductState>((set) => ({
           } else {
             return item;
           }
-        })
+        }),
+        isLoading: false
       }));
     } catch (error) {
       // Handle error
-      set({ status: FETCH_STATUS.ERROR });
+      set({ isLoading: false, messageError: MESSAGES_ERROR.UPDATE_PRODUCT_FAIL });
       throw new Error(MESSAGES_ERROR.UPDATE_PRODUCT_FAIL);
+    }
+  },
+
+  deleteProduct: async (product: Product) => {
+    set({ isLoading: true });
+    try {
+      await deleteProduct(product.id);
+      set((state) => ({
+        productsData: state.productsData.filter((item) => item.id !== product.id)
+      }));
+    } catch (error) {
+      // Handle error
+      set({ isLoading: false, messageError: MESSAGES_ERROR.REMOVE_PRODUCT_FAIL });
+      throw new Error(MESSAGES_ERROR.REMOVE_PRODUCT_FAIL);
     }
   }
 }));
