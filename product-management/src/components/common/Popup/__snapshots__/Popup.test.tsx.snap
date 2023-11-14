@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Popup. component should render correctly 1`] = `
+<div
+  class="css-1dt30w5"
+  data-testid="error"
+>
+  <button
+    class="chakra-button css-k21o6t"
+    type="button"
+  >
+    <svg
+      class="chakra-icon css-g7h3az"
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M18 6L6 18M6 6L18 18"
+        stroke="#667085"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+      />
+    </svg>
+  </button>
+  <p
+    class="chakra-text css-mpfzx7"
+  >
+    error
+  </p>
+  <p
+    class="chakra-text css-y9i0tt"
+  >
+    Lorem ipsum dolor sit amet
+  </p>
+</div>
+`;
+
+exports[`Popup. component should render correctly 2`] = `
+<div
+  class="css-1dt30w5"
+  data-testid="warning"
+>
+  <button
+    class="chakra-button css-k21o6t"
+    type="button"
+  >
+    <svg
+      class="chakra-icon css-g7h3az"
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M18 6L6 18M6 6L18 18"
+        stroke="#667085"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+      />
+    </svg>
+  </button>
+  <p
+    class="chakra-text css-11rcpoa"
+  >
+    warning
+  </p>
+  <p
+    class="chakra-text css-y9i0tt"
+  >
+    Lorem ipsum dolor sit amet
+  </p>
+</div>
+`;
+
+exports[`Popup. component should render correctly 3`] = `
+<div
+  class="css-1dt30w5"
+  data-testid="success"
+>
+  <button
+    class="chakra-button css-k21o6t"
+    type="button"
+  >
+    <svg
+      class="chakra-icon css-g7h3az"
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M18 6L6 18M6 6L18 18"
+        stroke="#667085"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+      />
+    </svg>
+  </button>
+  <p
+    class="chakra-text css-1q0v5yv"
+  >
+    success
+  </p>
+  <p
+    class="chakra-text css-y9i0tt"
+  >
+    Lorem ipsum dolor sit amet
+  </p>
+</div>
+`;

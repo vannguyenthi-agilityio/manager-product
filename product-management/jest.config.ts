@@ -10,7 +10,7 @@ export default {
     '^@contexts': '<rootDir>/src/contexts/index',
     '^@utils/(.*)': '<rootDir>/src/utils/$1',
     '^@assets': '<rootDir>/src/assets',
-    '^@hooks': '<rootDir>/src/hooks/index',
+    '^@hooks/(.*)': '<rootDir>/src/hooks/$1',
     '^.+\\.svg$': 'jest-svg-transformer',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
   },
