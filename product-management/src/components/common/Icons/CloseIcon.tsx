@@ -4,8 +4,8 @@ import { Icon } from '@chakra-ui/react';
 export const CloseIcon = () => {
   return (
     <Icon
-      width='24'
-      height='24'
+      width='24px'
+      height='24px'
       viewBox='0 0 24 24'
       fill='none'
     >
