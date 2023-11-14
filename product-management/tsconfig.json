@@ -29,6 +29,7 @@
       "@fonts": ["src/fonts"],
       "@hooks": ["src/hooks"],
       "@utils": ["src/utils"],
+      "@stores": ["src/stores"],
       "@*": ["src/*"]
     }
   },
