@@ -22,7 +22,6 @@ import productStore from '@stores/index';
 interface ICreateProductProps {
   isOpen: boolean;
   onClose: () => void;
-  onClick?: () => void;
   product?: Product;
   type?: MODAL_TYPE;
   handleSubmit?: (e: FormEvent<HTMLFormElement>) => void;

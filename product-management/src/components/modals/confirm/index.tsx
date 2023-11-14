@@ -32,7 +32,6 @@ import productStore from '@stores/index';
 interface ICreateProductProps {
   isOpen: boolean;
   onClose: () => void;
-  onClick?: () => void;
   product?: Product;
   title?: string;
   content?: string;
