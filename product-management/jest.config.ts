@@ -12,6 +12,7 @@ export default {
     '^@utils/(.*)': '<rootDir>/src/utils/$1',
     '^@assets': '<rootDir>/src/assets',
     '^@hooks/(.*)': '<rootDir>/src/hooks/$1',
+    '^@stores/(.*)': '<rootDir>/src/stores/$1',
     '^.+\\.svg$': 'jest-svg-transformer',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
   },

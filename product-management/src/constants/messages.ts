@@ -2,6 +2,7 @@ export const MESSAGES_ERROR = {
   EMPTY: 'No data found!',
   EMPTY_FILED: 'Please fill in this field!',
   FAIL_TO_FETCH: 'Something went wrong!! Please reload page.',
+  FAIL_TO_FETCH_API: 'Something went wrong!! Please check URL_API.',
   ADD_NEW_PRODUCT_SUCCESS: 'Add new product successful!',
   ADD_NEW_PRODUCT_FAIL: 'Add new product fail!',
   REMOVE_PRODUCT_SUCCESS: 'Remove product successful!',

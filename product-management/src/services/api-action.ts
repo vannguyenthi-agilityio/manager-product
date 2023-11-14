@@ -16,17 +16,12 @@ import { PRODUCTS_API } from '@constants';
  * @throws {Error} - If there's an error geting the product.
  */
 export const getProductById = async (id: string): Promise<Product | null> => {
-  try {
-    const url = `${PRODUCTS_API}/${id}`;
+  const url = `${PRODUCTS_API}/${id}`;
 
-    const response = await axios.get(url, {
-      headers: { 'content-type': 'application/json' }
-    });
-
-    return response.data;
-  } catch (error) {
-    throw new Error(MESSAGES_ERROR.FAIL_TO_FETCH);
-  }
+  const response = await axios.get(url, {
+    headers: { 'content-type': 'application/json' }
+  });
+  return response.data;
 };
 
 export const getProducts = async (): Promise<Product[]> => {
@@ -37,6 +32,45 @@ export const getProducts = async (): Promise<Product[]> => {
 
     return response.data;
   } catch (error) {
-    throw new Error(MESSAGES_ERROR.FAIL_TO_FETCH);
+    throw new Error(MESSAGES_ERROR.FAIL_TO_FETCH_API);
+  }
+};
+
+/**
+ * Adds a product to list.
+ * @param {Product} product - The product to add to the list.
+ * @returns {Promise<Product>} - The response from the API.
+ * @throws {Error} - If there's an error adding the product to the list.
+ */
+export const addNewProduct = async (product: Product): Promise<Product> => {
+  try {
+    const response = await axios.post(PRODUCTS_API, product, {
+      headers: { 'content-type': 'application/json' }
+    });
+
+    return response.data;
+  } catch (error) {
+    throw new Error(MESSAGES_ERROR.ADD_NEW_PRODUCT_FAIL);
+  }
+};
+
+/**
+ * Updates an product.
+ * @param {string} id - The ID of the product to update.
+ * @param {Partial<Product>} updatedData - The updated data for the product.
+ * @param {string} url - The URL of the API endpoint.
+ * @returns {Promise<Product>} - The response from the API.
+ * @throws {Error} - If there's an error updating the product.
+ */
+export const updateProduct = async (id: string, updatedData: Partial<Product>): Promise<Product> => {
+  try {
+    console.log('updatedData', updatedData, 'id', id);
+    const urlUpdateProduct = `${PRODUCTS_API}/${id}`;
+    const response = await axios.put(urlUpdateProduct, updatedData, {
+      headers: { 'content-type': 'application/json' }
+    });
+    return response.data;
+  } catch (error) {
+    throw new Error(MESSAGES_ERROR.UPDATE_PRODUCT_FAIL);
   }
 };
