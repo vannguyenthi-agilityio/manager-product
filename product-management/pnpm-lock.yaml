@@ -22,7 +22,6 @@ specifiers:
   '@types/jest': ^29.5.6
   '@types/react': ^18.2.15
   '@types/react-dom': ^18.2.7
-  '@types/uuid': ^9.0.6
   '@typescript-eslint/eslint-plugin': ^6.9.0
   '@typescript-eslint/parser': ^6.9.0
   '@vitejs/plugin-react': ^4.0.3
@@ -93,7 +92,6 @@ devDependencies:
   '@types/jest': 29.5.6
   '@types/react': 18.2.33
   '@types/react-dom': 18.2.14
-  '@types/uuid': 9.0.6
   '@typescript-eslint/eslint-plugin': 6.9.0_kdkkxsk7lol6ssd3nogxezhooq
   '@typescript-eslint/parser': 6.9.0_i3vkbg2fztj7jno7sh3heeojya
   '@vitejs/plugin-react': 4.1.0_vite@4.5.0
@@ -5590,10 +5588,6 @@ packages:
 
   /@types/unist/2.0.9:
     resolution: {integrity: sha512-zC0iXxAv1C1ERURduJueYzkzZ2zaGyc+P2c95hgkikHPr3z8EdUZOlgEQ5X0DRmwDZn+hekycQnoeiiRVrmilQ==}
-    dev: true
-
-  /@types/uuid/9.0.6:
-    resolution: {integrity: sha512-BT2Krtx4xaO6iwzwMFUYvWBWkV2pr37zD68Vmp1CDV196MzczBRxuEpD6Pr395HAgebC/co7hOphs53r8V7jew==}
     dev: true
 
   /@types/yargs-parser/21.0.2:
