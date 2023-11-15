@@ -2,7 +2,7 @@ import { useToast } from '@chakra-ui/react';
 import Popup from '@components/common/Popup';
 import { POPUP_STATUS } from '@constants';
 
-export const usePopup = () => {
+export const useCustomPopup = () => {
   const toast = useToast();
 
   return (message: string, popupStatus: POPUP_STATUS) => {

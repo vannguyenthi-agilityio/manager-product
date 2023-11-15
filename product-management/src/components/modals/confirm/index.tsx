@@ -21,7 +21,7 @@ import { COLORS, MODAL_TYPE, MODAL_STATUS, POPUP_STATUS, MESSAGES_ERROR } from '
 
 // Components
 import { DeleteIcon } from '@components/common/Icons';
-import { usePopup } from '@components/common/Popup/usePopup';
+import { useCustomPopup } from '@components/common/Popup/useCustomPopup';
 
 // Types
 import { Product } from '@types';
@@ -63,7 +63,7 @@ const ConfirmModal = ({
   });
 
   const { isLoading, messageError, deleteProduct } = productStore();
-  const popup = usePopup();
+  const popup = useCustomPopup();
 
   const onSubmit = () => {
     if (product) {

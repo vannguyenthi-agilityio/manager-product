@@ -11,7 +11,7 @@ import { COLORS, MESSAGES_ERROR, POPUP_STATUS, MODAL_TYPE } from '@constants';
 
 // Components
 import FormProduct from '@components/form';
-import { usePopup } from '@components/common/Popup/usePopup';
+import { useCustomPopup } from '@components/common/Popup/useCustomPopup';
 
 // Types
 import { Product } from '@types';
@@ -42,7 +42,7 @@ const ProductModal = ({ type = MODAL_TYPE.CREATE, isOpen = true, onClose, produc
 
   const { errors, dirtyFields } = formState;
 
-  const popup = usePopup();
+  const popup = useCustomPopup();
 
   const price = useRef({});
   const quantity = useRef({});
