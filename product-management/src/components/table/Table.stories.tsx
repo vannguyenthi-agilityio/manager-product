@@ -22,7 +22,7 @@ const Template: Storybook.StoryFn<typeof Table> = (args) => {
   return (
     <Table
       {...args}
-      onSearchClick={action('onSearchHandler')}
+      onActionProduct={action('onActionProduct')}
     />
   );
 };

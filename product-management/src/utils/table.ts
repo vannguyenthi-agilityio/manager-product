@@ -14,3 +14,16 @@ export const formatProductResponse = (productList: Product[]) =>
     brand: product.brand,
     price: product.price
   }));
+
+export const formatProduct = (product: Product) => {
+  const productFormat = {
+    id: product.id,
+    name: product.name,
+    status: product.status,
+    types: product.types,
+    quantity: product.quantity,
+    brand: product.brand,
+    price: product.price
+  };
+  return productFormat;
+};

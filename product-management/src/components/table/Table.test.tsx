@@ -1,4 +1,4 @@
-import { cleanup, render, fireEvent } from '@testing-library/react';
+import { cleanup, render } from '@testing-library/react';
 
 // Utils
 import { formatProductResponse } from '@utils/table';
@@ -23,7 +23,7 @@ describe('Table render', () => {
       <Table
         columns={productColumns}
         data={formatProductData}
-        onSearchClick={mockFunction}
+        onActionProduct={mockFunction}
       />
     );
 
@@ -31,20 +31,5 @@ describe('Table render', () => {
 
     expect(table).toBeTruthy();
     expect(table).toMatchSnapshot();
-  });
-
-  it('should simulate click search and expect mock function to be called', () => {
-    const mockFunction = jest.fn();
-    const { getByText } = render(
-      <Table
-        columns={productColumns}
-        data={formatProductData}
-        onSearchClick={mockFunction}
-      />
-    );
-    const searchColum = getByText('Name');
-
-    fireEvent.click(searchColum);
-    expect(mockFunction).toHaveBeenCalled();
   });
 });

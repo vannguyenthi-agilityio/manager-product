@@ -10,6 +10,7 @@ import {
   MenuList,
   MenuButton,
   MenuItem,
+  TableCaption,
   TableBodyProps as TableBodyPropsChakra
 } from '@chakra-ui/react';
 
@@ -28,17 +29,18 @@ import { COLORS } from '@constants';
 interface TableRowProps extends TableBodyPropsChakra {
   data: Product[];
   filteredItems?: string[];
+  onActionProduct: (product: Product, action: string) => void;
 }
 
-export const TableRow = ({ data = [], filteredItems = [], ...props }: TableRowProps) => {
-  const handleEditProduct = () => {
+const TableRow = ({ data = [], filteredItems = [], onActionProduct, ...props }: TableRowProps) => {
+  const handleEditProduct = (product: Product) => {
     //TODO: will handle to open Edit Product modal
-    console.log('handle open Edit Product modal');
+    onActionProduct(product, 'edit');
   };
 
-  const handleDeleteProduct = () => {
+  const handleDeleteProduct = (product: Product) => {
     //TODO: will handle to open Confirm Delete Product modal
-    console.log('handle open confirm Delete Product modal');
+    onActionProduct(product, 'delete');
   };
 
   const renderTableTd = (key: string, value: string) => {
@@ -93,14 +95,13 @@ export const TableRow = ({ data = [], filteredItems = [], ...props }: TableRowPr
     }
   };
 
-  return (
+  return data.length > 0 ? (
     <Tbody {...props}>
       {data.map((item: Product) => {
         return (
           <Tr key={item.id}>
             {filterItemInArray(Object.keys(item), filteredItems).map((key: string) => {
               const value = item[key as keyof Product] as string;
-
               return <Td key={`${key}-${item.id}`}>{renderTableTd(key, value)}</Td>;
             })}
             <Td>
@@ -141,10 +142,10 @@ export const TableRow = ({ data = [], filteredItems = [], ...props }: TableRowPr
                     </Flex>
                   </MenuButton>
                   <MenuList>
-                    <MenuItem onClick={handleEditProduct}>Edit</MenuItem>
+                    <MenuItem onClick={() => handleEditProduct(item)}>Edit</MenuItem>
                     <MenuItem
                       color='red'
-                      onClick={handleDeleteProduct}
+                      onClick={() => handleDeleteProduct(item)}
                     >
                       {' '}
                       Delete
@@ -157,5 +158,9 @@ export const TableRow = ({ data = [], filteredItems = [], ...props }: TableRowPr
         );
       })}
     </Tbody>
+  ) : (
+    <TableCaption>Search not found</TableCaption>
   );
 };
+
+export default TableRow;

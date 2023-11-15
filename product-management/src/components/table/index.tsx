@@ -2,11 +2,14 @@
 import { Table as TableChakra, TableProps as TablePropsChakra } from '@chakra-ui/react';
 
 // Components
-import { TableHead } from './TableHead';
-import { TableRow } from './TableRow';
+import TableHead from './TableHead';
+import TableRow from './TableRow';
 
 // Types
 import { Product, ColumnHeader } from '@types';
+
+//Stories
+import productStore from '@stores/index';
 
 interface TableProps extends TablePropsChakra {
   columns?: ColumnHeader[];
@@ -15,7 +18,7 @@ interface TableProps extends TablePropsChakra {
   size?: 'default';
   variant?: 'default';
   className?: string;
-  onSearchClick: (value: ColumnHeader) => void;
+  onActionProduct: (product: Product, action: string) => void;
 }
 
 const Table = ({
@@ -25,11 +28,12 @@ const Table = ({
   size = 'default',
   variant = 'default',
   className = '',
-  onSearchClick,
+  onActionProduct,
   ...props
 }: TableProps) => {
+  const { filterProduct } = productStore();
   const handleSearchClick = (value: ColumnHeader) => {
-    onSearchClick(value);
+    filterProduct(value.value);
   };
 
   return (
@@ -47,6 +51,7 @@ const Table = ({
       <TableRow
         data={data}
         filteredItems={filteredItems}
+        onActionProduct={onActionProduct}
       />
     </TableChakra>
   );
