@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect } from 'react';
 
 // Components Chakra
 import { Button, Heading, Flex, Box, useDisclosure } from '@chakra-ui/react';
@@ -56,11 +56,11 @@ const HomePage = () => {
     getProducts();
   }, []);
 
-  useMemo(() => {
-    if (isLoading && messageError) {
+  useEffect(() => {
+    if (messageError) {
       popup(MESSAGES_ERROR.FAIL_TO_FETCH_API, POPUP_STATUS.ERROR);
     }
-  }, [isLoading, messageError]);
+  }, [messageError]);
 
   const formatProductData = formatProductResponse(productsData) as Product[];
 

@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from 'react';
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 // Components Chakra
@@ -34,11 +34,11 @@ const DetailPage = () => {
     }
   }, [id]);
 
-  useMemo(() => {
-    if (isLoading && messageError) {
+  useEffect(() => {
+    if (messageError) {
       popup(MESSAGES_ERROR.FAIL_TO_FETCH_API, POPUP_STATUS.ERROR);
     }
-  }, [isLoading, messageError]);
+  }, [messageError]);
 
   return (
     <PageLayout>
