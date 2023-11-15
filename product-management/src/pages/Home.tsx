@@ -1,13 +1,19 @@
-import { useContext } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 
 // Components Chakra
-import { Button, Heading, Flex, Box } from '@chakra-ui/react';
+import { Button, Heading, Flex, Box, useDisclosure } from '@chakra-ui/react';
 
 // Utils
 import { convertPxToRem, formatProductResponse } from '@utils/index';
 
 // Components
 import Table from '@components/table';
+import Loading from '@components/common/Loading';
+import ProductModal from '@components/modals/form';
+import ConfirmModal from '@components/modals/confirm';
+
+// Hooks
+import { useCustomPopup } from '@hooks/useCustomPopup';
 
 // Mocks
 import { productColumns } from '@constants/mocks/table';
@@ -16,21 +22,57 @@ import { productColumns } from '@constants/mocks/table';
 import { Product } from '@types';
 
 // Constants
-import { COLORS } from '@constants';
+import {
+  COLORS,
+  MESSAGES_ERROR,
+  POPUP_STATUS,
+  MODAL_TYPE,
+  MODAL_STATUS,
+  MOCKED_PRODUCT_VALUE_DEFAULT
+} from '@constants';
 
 // Layouts
 import PageLayout from '@layouts/PageLayout';
 
-// context
-import { ProductContext } from '@contexts/ProductProvider';
+//Stories
+import productStore from '@stores/index';
 
 const HomePage = () => {
-  const { products } = useContext(ProductContext);
+  const { getProducts, productsData, isLoading, messageError } = productStore();
+  const [product, setProduct] = useState<Product>();
+  const popup = useCustomPopup();
 
-  const formatProductData = formatProductResponse(products) as Product[];
+  const { onOpen: onOpenPurchase, isOpen: isOpenPurchase, onClose: onClosePurchase } = useDisclosure();
 
-  const handleSearchClick = () => {
-    console.log('handleSearchClick');
+  const {
+    isOpen: isOpenProductEditModal,
+    onOpen: onOpenProductEditModal,
+    onClose: onCloseProductEditModal
+  } = useDisclosure();
+
+  const { isOpen: isOpenConfirmModal, onOpen: onOpenConfirmModal, onClose: onCloseConfirmModal } = useDisclosure();
+
+  useEffect(() => {
+    getProducts();
+  }, []);
+
+  useMemo(() => {
+    if (isLoading && messageError) {
+      popup(MESSAGES_ERROR.FAIL_TO_FETCH_API, POPUP_STATUS.ERROR);
+    }
+  }, [isLoading, messageError]);
+
+  const formatProductData = formatProductResponse(productsData) as Product[];
+
+  const handleActionProduct = (product: Product, action: string) => {
+    if (product) {
+      setProduct(product);
+      if (action === MODAL_TYPE.EDIT) {
+        onOpenProductEditModal();
+      } else {
+        onOpenConfirmModal();
+      }
+    }
   };
 
   return (
@@ -54,15 +96,42 @@ const HomePage = () => {
             size='md'
             variant='outline'
             mb={convertPxToRem(30)}
+            onClick={onOpenPurchase}
           >
             Add New Product
           </Button>
         </Flex>
-        <Table
-          columns={productColumns}
-          data={formatProductData}
-          filteredItems={['id']}
-          onSearchClick={handleSearchClick}
+        {isLoading ? (
+          <Loading />
+        ) : (
+          <Table
+            columns={productColumns}
+            data={formatProductData}
+            filteredItems={['id']}
+            onActionProduct={handleActionProduct}
+          />
+        )}
+        <ProductModal
+          isOpen={isOpenPurchase}
+          onClose={onClosePurchase}
+          product={MOCKED_PRODUCT_VALUE_DEFAULT}
+        />
+        {productsData && (
+          <ProductModal
+            isOpen={isOpenProductEditModal}
+            onClose={onCloseProductEditModal}
+            product={product}
+            type={MODAL_TYPE.EDIT}
+          />
+        )}
+        <ConfirmModal
+          isOpen={isOpenConfirmModal}
+          onClose={onCloseConfirmModal}
+          product={product}
+          status={MODAL_STATUS.CONFIRM}
+          type={MODAL_TYPE.DELETE}
+          title='Delete Product'
+          content='Are you sure you want delete this product? This action cannot be undone'
         />
       </Box>
     </PageLayout>

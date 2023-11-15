@@ -6,7 +6,7 @@ import { FC, FormEvent, useRef } from 'react';
 import { Box, Button, HStack } from '@chakra-ui/react';
 
 // Constant
-import { COLORS } from '@constants/variants';
+import { COLORS, ROUTES } from '@constants';
 
 // Utils
 import { convertPxToRem } from '@utils/index';
@@ -26,10 +26,10 @@ export interface IFormProductProps {
   handleBack?: (e: FormEvent<HTMLFormElement>) => void;
 }
 
-export const FormDetail: FC<IFormProductProps> = () => {
+export const FormDetail: FC<IFormProductProps> = ({ product }) => {
   const { handleSubmit, register, formState, watch } = useForm<IFormProductProps>({
     defaultValues: {
-      product: MOCKED_PRODUCT_VALUE_DEFAULT
+      product: product
     },
     mode: 'onChange'
   });
@@ -60,19 +60,22 @@ export const FormDetail: FC<IFormProductProps> = () => {
   };
 
   const handleBack = () => {
-    console.log('handleBack');
-    navigate('./');
+    navigate(ROUTES.HOME);
   };
 
   return (
-    <Box data-testid='form-detail'>
+    <Box
+      data-testid='form-detail'
+      w='full'
+      maxW={convertPxToRem(432)}
+    >
       <FormProduct
         product={MOCKED_PRODUCT_VALUE_DEFAULT}
         register={register}
         formState={formState}
       />
       <HStack
-        maxW={convertPxToRem(430)}
+        maxW={convertPxToRem(432)}
         justifyContent='space-between'
         mt={convertPxToRem(20)}
       >
