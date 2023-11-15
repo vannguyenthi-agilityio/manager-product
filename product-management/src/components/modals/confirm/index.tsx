@@ -21,7 +21,7 @@ import { COLORS, MODAL_TYPE, MODAL_STATUS, POPUP_STATUS, MESSAGES_ERROR } from '
 
 // Components
 import { DeleteIcon } from '@components/common/Icons';
-import { useCustomPopup } from '@components/common/Popup/useCustomPopup';
+import { useCustomPopup } from '@hooks/useCustomPopup';
 
 // Types
 import { Product } from '@types';

@@ -11,7 +11,7 @@ import { COLORS, MESSAGES_ERROR, POPUP_STATUS, MODAL_TYPE } from '@constants';
 
 // Components
 import FormProduct from '@components/form';
-import { useCustomPopup } from '@components/common/Popup/useCustomPopup';
+import { useCustomPopup } from '@hooks/useCustomPopup';
 
 // Types
 import { Product } from '@types';
