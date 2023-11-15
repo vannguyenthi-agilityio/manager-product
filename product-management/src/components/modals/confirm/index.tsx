@@ -17,22 +17,26 @@ import {
 import { convertPxToRem } from '@utils/common';
 
 // Constants
-import { COLORS } from '@constants';
+import { COLORS, MODAL_TYPE, MODAL_STATUS, POPUP_STATUS, MESSAGES_ERROR } from '@constants';
 
 // Components
 import { DeleteIcon } from '@components/common/Icons';
+import { useCustomPopup } from '@hooks/useCustomPopup';
 
 // Types
 import { Product } from '@types';
 
+//Stories
+import productStore from '@stores/index';
+
 interface ICreateProductProps {
   isOpen: boolean;
   onClose: () => void;
-  onClick: () => void;
   product?: Product;
   title?: string;
   content?: string;
-  type?: string;
+  status?: MODAL_STATUS;
+  type?: MODAL_TYPE;
   handleSubmit?: (e: FormEvent<HTMLFormElement>) => void;
 }
 
@@ -45,11 +49,11 @@ export interface IFormProductProps {
 const ConfirmModal = ({
   isOpen = true,
   onClose,
-  onClick,
   product,
   title = 'Ooops',
   content = 'Something went wrong',
-  type = 'waring'
+  status = MODAL_STATUS.WARNING,
+  type = MODAL_TYPE.WRONG
 }: ICreateProductProps) => {
   const { handleSubmit, formState } = useForm<IFormProductProps>({
     defaultValues: {
@@ -58,9 +62,20 @@ const ConfirmModal = ({
     mode: 'onChange'
   });
 
-  const onSubmit = (data: IFormProductProps) => {
-    onClick();
-    console.log(data);
+  const { isLoading, messageError, deleteProduct } = productStore();
+  const popup = useCustomPopup();
+
+  const onSubmit = () => {
+    if (product) {
+      deleteProduct(product);
+      if (isLoading && messageError) {
+        popup(messageError, POPUP_STATUS.ERROR);
+      } else {
+        onClose();
+        popup(MESSAGES_ERROR.REMOVE_PRODUCT_SUCCESS, POPUP_STATUS.SUCCESS);
+      }
+    }
+    onClose();
   };
 
   const { isSubmitting } = formState;
@@ -94,7 +109,7 @@ const ConfirmModal = ({
           justifyContent='right'
           gap={convertPxToRem(15)}
         >
-          {type === 'delete' && (
+          {type === MODAL_TYPE.DELETE && (
             <Button
               mt={1}
               variant='outline'
@@ -111,13 +126,13 @@ const ConfirmModal = ({
           <Button
             mt={1}
             colorScheme={`${COLORS.CORAL}`}
-            size={type === 'waring' ? 'full' : 'lg'}
+            size={status === MODAL_STATUS.WARNING ? 'full' : 'lg'}
             fontWeight='semibold'
             isLoading={isSubmitting}
             onClick={handleSubmit(onSubmit)}
             data-testid='click-confirm'
           >
-            {type === 'waring' ? 'Close' : 'Delete'}
+            {status === MODAL_STATUS.WARNING ? 'Close' : 'Delete'}
           </Button>
         </ModalFooter>
       </ModalContent>

@@ -4,7 +4,7 @@ import Storybook from '@storybook/react';
 // Components
 import ProductModal from '.';
 
-import { MOCKED_PRODUCT_VALUE_DEFAULT, MOCKED_PRODUCT_EXIST } from '@constants';
+import { MOCKED_PRODUCT_VALUE_DEFAULT, MOCKED_PRODUCT_EXIST, MODAL_TYPE } from '@constants';
 
 // Code
 import { asEdit, asDefault } from './ProductModal.code';
@@ -44,7 +44,7 @@ Default.parameters = {
 export const Edit = Template.bind({});
 Edit.args = {
   product: MOCKED_PRODUCT_EXIST,
-  action: 'edit'
+  type: MODAL_TYPE.EDIT
 };
 Edit.parameters = {
   componentSource: {

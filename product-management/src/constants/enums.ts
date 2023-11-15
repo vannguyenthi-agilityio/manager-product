@@ -78,3 +78,15 @@ export enum FETCH_STATUS {
   SUCCESS,
   ERROR
 }
+
+export enum MODAL_TYPE {
+  EDIT = 'edit',
+  DELETE = 'delete',
+  CREATE = 'create',
+  WRONG = 'wrong'
+}
+
+export enum MODAL_STATUS {
+  WARNING = 'warning',
+  CONFIRM = 'confirm'
+}

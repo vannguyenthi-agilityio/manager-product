@@ -139,13 +139,12 @@ describe('ProductModal component', () => {
     expect(inputPrice.value).toBe('100');
     expect(inputQuantity.value).toBe('1000');
 
-    expect(confirmBtn).toBeDisabled;
-
     await act(async () => {
       fireEvent.click(confirmBtn);
       jest.runOnlyPendingTimers();
     });
 
-    expect(onClick).toBeCalledTimes(1);
+    expect(confirmBtn).toBeDisabled;
+    expect(onClick).toBeCalledTimes(0);
   });
 });

@@ -5,7 +5,7 @@ import Storybook from '@storybook/react';
 import ConfirmModal from '.';
 
 // Constants
-import { MOCKED_PRODUCT_VALUE_DEFAULT } from '@constants';
+import { MOCKED_PRODUCT_VALUE_DEFAULT, MODAL_TYPE } from '@constants';
 
 // Code
 import { asDefault, asDelete } from './ConfirmModal.code';
@@ -43,7 +43,7 @@ Default.parameters = {
 export const Delete = Template.bind({});
 Delete.args = {
   product: MOCKED_PRODUCT_VALUE_DEFAULT,
-  type: 'delete',
+  type: MODAL_TYPE.DELETE,
   title: 'Delete Product',
   content: 'Are you sure you want delete this product? This action cannot be undone'
 };
