@@ -8,22 +8,29 @@ import { FETCH_STATUS, MESSAGES_ERROR } from '@constants';
 import { Product } from '@types';
 
 // services
-import { getProducts, addNewProduct, updateProduct, deleteProduct } from '@services/index';
+import { getProducts, addNewProduct, updateProduct, deleteProduct, getProductById } from '@services/index';
 
 interface ProductState {
   productsData: Product[];
+  productData: Product;
   isLoading: boolean;
   messageError: string;
+  valueFilter: string;
   getProducts: () => void;
+  getProduct: (id: string) => void;
   addNewProduct: (product: Product) => void;
   updateProduct: (product: Product) => void;
   deleteProduct: (product: Product) => void;
+  filterProduct: (valueFilter: string, dataFilter?: Product[]) => void;
 }
 
 const productStore = create<ProductState>((set) => ({
   productsData: [],
+  productData: {} as Product,
   isLoading: false,
   messageError: '',
+  valueFilter: 'name',
+  inputFilter: '',
   status: FETCH_STATUS.INIT,
 
   getProducts: async () => {
@@ -31,6 +38,20 @@ const productStore = create<ProductState>((set) => ({
     try {
       const productsData = await getProducts();
       set({ productsData: productsData, isLoading: false });
+    } catch (error) {
+      // Handle error
+      set({ isLoading: false, messageError: MESSAGES_ERROR.FAIL_TO_FETCH_API });
+      throw new Error(MESSAGES_ERROR.FAIL_TO_FETCH_API);
+    }
+  },
+
+  getProduct: async (id: string) => {
+    set({ isLoading: true });
+    try {
+      const productData = await getProductById(id);
+      if (productData) {
+        set({ productData: productData, isLoading: false });
+      }
     } catch (error) {
       // Handle error
       set({ isLoading: false, messageError: MESSAGES_ERROR.FAIL_TO_FETCH_API });
@@ -90,6 +111,13 @@ const productStore = create<ProductState>((set) => ({
       // Handle error
       set({ isLoading: false, messageError: MESSAGES_ERROR.REMOVE_PRODUCT_FAIL });
       throw new Error(MESSAGES_ERROR.REMOVE_PRODUCT_FAIL);
+    }
+  },
+
+  filterProduct: (valueFilter: string, dataFilter?: Product[]) => {
+    set({ valueFilter: valueFilter });
+    if (dataFilter) {
+      set({ productsData: dataFilter });
     }
   }
 }));

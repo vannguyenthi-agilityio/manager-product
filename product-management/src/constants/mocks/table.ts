@@ -18,13 +18,13 @@ const productColumns = [
     }
   },
   {
-    value: 'Type',
+    value: 'Types',
     filterable: {
       isFilter: false
     }
   },
   {
-    value: 'Quantily',
+    value: 'Quantity',
     filterable: {
       isFilter: false
     }
