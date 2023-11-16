@@ -10,7 +10,6 @@ import { convertPxToRem, formatProductResponse } from '@utils/index';
 
 // Components
 import Table from '@components/table';
-import Loading from '@components/common/Loading';
 import ProductModal from '@components/modals/form';
 import ConfirmModal from '@components/modals/confirm';
 
@@ -41,7 +40,7 @@ import PageLayout from '@layouts/PageLayout';
 import productStore from '@stores/index';
 
 const HomePage = () => {
-  const { getProducts, productsData, isLoading, messageError } = productStore();
+  const { getProducts, productsData, messageError } = productStore();
   const [product, setProduct] = useState<Product>();
   const popup = useCustomPopup();
   const navigate = useNavigate();
@@ -114,18 +113,14 @@ const HomePage = () => {
             Add New Product
           </Button>
         </Flex>
-        {isLoading ? (
-          <Loading />
-        ) : (
-          <Table
-            columns={productColumns}
-            data={formatProductData}
-            filteredItems={['id']}
-            onShowDetail={handleShowDetail}
-            onActionProduct={handleActionProduct}
-            onSearchClick={handleSearchClick}
-          />
-        )}
+        <Table
+          columns={productColumns}
+          data={formatProductData}
+          filteredItems={['id']}
+          onShowDetail={handleShowDetail}
+          onActionProduct={handleActionProduct}
+          onSearchClick={handleSearchClick}
+        />
         <ProductModal
           isOpen={isOpenPurchase}
           onClose={onClosePurchase}
