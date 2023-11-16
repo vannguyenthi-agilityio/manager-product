@@ -44,10 +44,7 @@ export const getProducts = async (): Promise<Product[]> => {
  */
 export const addNewProduct = async (product: Product): Promise<Product> => {
   try {
-    const response = await axios.post(PRODUCTS_API, product, {
-      headers: { 'content-type': 'application/json' }
-    });
-
+    const response = await axios.post(PRODUCTS_API, product);
     return response.data;
   } catch (error) {
     throw new Error(MESSAGES_ERROR.ADD_NEW_PRODUCT_FAIL);

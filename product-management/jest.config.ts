@@ -18,9 +18,5 @@ export default {
   },
   testMatch: ['<rootDir>/src/**/*.test.{tsx,ts}', '<rootDir>/src/**/__tests__/*.test.{tsx,ts}'],
   collectCoverage: false,
-  collectCoverageFrom: [
-    '<rootDir>/src/components/**/index.tsx',
-    '<rootDir>/src/**/__tests__/*.test.{tsx,ts}',
-    '!src/**/*.d.ts'
-  ]
+  collectCoverageFrom: ['<rootDir>/src/**/**/index.tsx', '<rootDir>/src/**/__tests__/*.test.{tsx,ts}', '!src/**/*.d.ts']
 };
