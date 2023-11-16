@@ -18,7 +18,7 @@ import {
 import { Product } from '@types';
 
 // Constans
-import { PRODUCT_STATUS } from '@constants';
+import { PRODUCT_STATUS, MODAL_TYPE } from '@constants';
 
 // Utils
 import { convertPxToRem, filterItemInArray, convertStringToCapitalize, formatCurrencyUSD } from '@utils/index';
@@ -30,17 +30,16 @@ interface TableRowProps extends TableBodyPropsChakra {
   data: Product[];
   filteredItems?: string[];
   onActionProduct: (product: Product, action: string) => void;
+  onShowDetail: (id: string) => void;
 }
 
-const TableRow = ({ data = [], filteredItems = [], onActionProduct, ...props }: TableRowProps) => {
+const TableRow = ({ data = [], filteredItems = [], onActionProduct, onShowDetail, ...props }: TableRowProps) => {
   const handleEditProduct = (product: Product) => {
-    //TODO: will handle to open Edit Product modal
-    onActionProduct(product, 'edit');
+    onActionProduct(product, MODAL_TYPE.EDIT);
   };
 
   const handleDeleteProduct = (product: Product) => {
-    //TODO: will handle to open Confirm Delete Product modal
-    onActionProduct(product, 'delete');
+    onActionProduct(product, MODAL_TYPE.DELETE);
   };
 
   const renderTableTd = (key: string, value: string) => {
@@ -102,7 +101,14 @@ const TableRow = ({ data = [], filteredItems = [], onActionProduct, ...props }: 
           <Tr key={item.id}>
             {filterItemInArray(Object.keys(item), filteredItems).map((key: string) => {
               const value = item[key as keyof Product] as string;
-              return <Td key={`${key}-${item.id}`}>{renderTableTd(key, value)}</Td>;
+              return (
+                <Td
+                  key={`${key}-${item.id}`}
+                  onClick={() => onShowDetail(item.id)}
+                >
+                  {renderTableTd(key, value)}
+                </Td>
+              );
             })}
             <Td>
               <Flex justifyContent='center'>
