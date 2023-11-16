@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 
+import { useNavigate } from 'react-router-dom';
+
 // Components Chakra
 import { Button, Heading, Flex, Box, useDisclosure } from '@chakra-ui/react';
 
@@ -19,7 +21,7 @@ import { useCustomPopup } from '@hooks/useCustomPopup';
 import { productColumns } from '@constants/mocks/table';
 
 // Types
-import { Product } from '@types';
+import { Product, ColumnHeader } from '@types';
 
 // Constants
 import {
@@ -28,6 +30,7 @@ import {
   POPUP_STATUS,
   MODAL_TYPE,
   MODAL_STATUS,
+  ROUTES,
   MOCKED_PRODUCT_VALUE_DEFAULT
 } from '@constants';
 
@@ -41,6 +44,8 @@ const HomePage = () => {
   const { getProducts, productsData, isLoading, messageError } = productStore();
   const [product, setProduct] = useState<Product>();
   const popup = useCustomPopup();
+  const navigate = useNavigate();
+  const { filterProduct } = productStore();
 
   const { onOpen: onOpenPurchase, isOpen: isOpenPurchase, onClose: onClosePurchase } = useDisclosure();
 
@@ -73,6 +78,14 @@ const HomePage = () => {
         onOpenConfirmModal();
       }
     }
+  };
+
+  const handleShowDetail = (id: string) => {
+    navigate(`${ROUTES.PRODUCT}/${id}`);
+  };
+
+  const handleSearchClick = (value: ColumnHeader) => {
+    filterProduct(value.value);
   };
 
   return (
@@ -108,7 +121,9 @@ const HomePage = () => {
             columns={productColumns}
             data={formatProductData}
             filteredItems={['id']}
+            onShowDetail={handleShowDetail}
             onActionProduct={handleActionProduct}
+            onSearchClick={handleSearchClick}
           />
         )}
         <ProductModal

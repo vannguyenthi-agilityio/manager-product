@@ -105,7 +105,8 @@ const productStore = create<ProductState>((set) => ({
     try {
       await deleteProduct(product.id);
       set((state) => ({
-        productsData: state.productsData.filter((item) => item.id !== product.id)
+        productsData: state.productsData.filter((item) => item.id !== product.id),
+        isLoading: false
       }));
     } catch (error) {
       // Handle error

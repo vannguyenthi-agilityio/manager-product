@@ -7,10 +7,6 @@ import TableRow from './TableRow';
 
 // Types
 import { Product, ColumnHeader } from '@types';
-
-//Stories
-import productStore from '@stores/index';
-
 interface TableProps extends TablePropsChakra {
   columns?: ColumnHeader[];
   data?: Product[];
@@ -19,6 +15,8 @@ interface TableProps extends TablePropsChakra {
   variant?: 'default';
   className?: string;
   onActionProduct: (product: Product, action: string) => void;
+  onShowDetail: (id: string) => void;
+  onSearchClick: (value: ColumnHeader) => void;
 }
 
 const Table = ({
@@ -29,13 +27,10 @@ const Table = ({
   variant = 'default',
   className = '',
   onActionProduct,
+  onShowDetail,
+  onSearchClick,
   ...props
 }: TableProps) => {
-  const { filterProduct } = productStore();
-  const handleSearchClick = (value: ColumnHeader) => {
-    filterProduct(value.value);
-  };
-
   return (
     <TableChakra
       size={size}
@@ -46,12 +41,13 @@ const Table = ({
     >
       <TableHead
         columns={columns}
-        onSearchClick={handleSearchClick}
+        onSearchClick={onSearchClick}
       />
       <TableRow
         data={data}
         filteredItems={filteredItems}
         onActionProduct={onActionProduct}
+        onShowDetail={onShowDetail}
       />
     </TableChakra>
   );
