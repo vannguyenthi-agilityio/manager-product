@@ -40,7 +40,7 @@ const ProductModal = ({ type = MODAL_TYPE.CREATE, isOpen = true, onClose, produc
     mode: 'onChange'
   });
 
-  const { errors, dirtyFields } = formState;
+  const { errors, dirtyFields, isDirty, isSubmitting } = formState;
 
   const popup = useCustomPopup();
 
@@ -52,9 +52,7 @@ const ProductModal = ({ type = MODAL_TYPE.CREATE, isOpen = true, onClose, produc
   const isEmptyQuantity = quantity.current.toString() == '';
 
   const isDirtyInputRequired =
-    type === MODAL_TYPE.CREATE
-      ? !dirtyFields.product?.name || !dirtyFields.product?.brand
-      : !dirtyFields.product?.name && !dirtyFields.product?.brand;
+    type === MODAL_TYPE.CREATE ? !dirtyFields.product?.name || !dirtyFields.product?.brand : !isDirty;
 
   const disableBtnSubmit =
     isDirtyInputRequired ||
@@ -66,7 +64,6 @@ const ProductModal = ({ type = MODAL_TYPE.CREATE, isOpen = true, onClose, produc
     isEmptyQuantity;
 
   const { addNewProduct, isLoading, messageError, updateProduct } = productStore();
-  const { isSubmitting } = formState;
 
   const onSubmit = (data: IFormProductProps) => {
     if (data.product) {
@@ -78,6 +75,7 @@ const ProductModal = ({ type = MODAL_TYPE.CREATE, isOpen = true, onClose, produc
         } else {
           onClose();
           popup(MESSAGES_ERROR.ADD_NEW_PRODUCT_SUCCESS, POPUP_STATUS.SUCCESS);
+          reset();
         }
       } else {
         if (product) {
@@ -97,6 +95,7 @@ const ProductModal = ({ type = MODAL_TYPE.CREATE, isOpen = true, onClose, produc
         } else {
           onClose();
           popup(MESSAGES_ERROR.UPDATE_PRODUCT_SUCCESS, POPUP_STATUS.SUCCESS);
+          reset();
         }
       }
     }

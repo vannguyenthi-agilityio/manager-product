@@ -17,6 +17,9 @@ import {
 // Types
 import { Product } from '@types';
 
+// Components
+import Loading from '@components/common/Loading';
+
 // Constans
 import { PRODUCT_STATUS, MODAL_TYPE } from '@constants';
 
@@ -25,6 +28,9 @@ import { convertPxToRem, filterItemInArray, convertStringToCapitalize, formatCur
 
 // Constants
 import { COLORS } from '@constants';
+
+//Stories
+import productStore from '@stores/index';
 
 interface TableRowProps extends TableBodyPropsChakra {
   data: Product[];
@@ -42,6 +48,8 @@ const TableRow = ({ data = [], filteredItems = [], onActionProduct, onShowDetail
     onActionProduct(product, MODAL_TYPE.DELETE);
   };
 
+  const { isLoading } = productStore();
+
   const renderTableTd = (key: string, value: string) => {
     switch (key) {
       case 'name':
@@ -49,6 +57,17 @@ const TableRow = ({ data = [], filteredItems = [], onActionProduct, onShowDetail
           <Text
             fontSize='sm'
             fontWeight='normal'
+            minW={{ base: 'auto', lg: convertPxToRem(160) }}
+          >
+            {convertStringToCapitalize(value)}
+          </Text>
+        );
+      case 'brand':
+        return (
+          <Text
+            fontSize='sm'
+            fontWeight='normal'
+            minW={{ base: 'auto', lg: convertPxToRem(160) }}
           >
             {convertStringToCapitalize(value)}
           </Text>
@@ -164,6 +183,8 @@ const TableRow = ({ data = [], filteredItems = [], onActionProduct, onShowDetail
         );
       })}
     </Tbody>
+  ) : isLoading ? (
+    <Loading />
   ) : (
     <TableCaption>Search not found</TableCaption>
   );

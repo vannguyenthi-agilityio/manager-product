@@ -6,9 +6,6 @@ import { MemoryRouter } from 'react-router-dom';
 // Components
 import FormDetail from '.';
 
-// Constants
-import { MOCKED_PRODUCT_VALUE_DEFAULT } from '@constants/mocks/product';
-
 const onBack = jest.fn();
 const onSubmit = jest.fn();
 const mockedUsedNavigate = jest.fn();
@@ -20,7 +17,6 @@ jest.mock('react-router-dom', () => ({
 
 const setup = () => {
   const props = {
-    product: MOCKED_PRODUCT_VALUE_DEFAULT,
     handleSubmit: onSubmit,
     handleBack: onBack
   };
@@ -53,7 +49,9 @@ describe('Product Form Component', () => {
     setup();
 
     const saveProduct = screen.getByTestId('click-save');
+
     expect(saveProduct).toBeDefined();
+
     const inputName = screen.getByTestId<HTMLInputElement>('input-name');
     expect(inputName).toBeDefined();
 

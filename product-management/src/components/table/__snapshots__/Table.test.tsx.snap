@@ -230,7 +230,7 @@ exports[`Table render should render Table component 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-m50rwi"
+          class="chakra-text css-1obn0sx"
         >
           Louis vuitton
         </p>
@@ -268,7 +268,7 @@ exports[`Table render should render Table component 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-fuwb12"
+          class="chakra-text css-1obn0sx"
         >
           Evan flores
         </p>
@@ -367,7 +367,7 @@ exports[`Table render should render Table component 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-m50rwi"
+          class="chakra-text css-1obn0sx"
         >
           Johnson & johnson
         </p>
@@ -405,7 +405,7 @@ exports[`Table render should render Table component 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-fuwb12"
+          class="chakra-text css-1obn0sx"
         >
           Arlene wilson
         </p>
@@ -504,7 +504,7 @@ exports[`Table render should render Table component 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-m50rwi"
+          class="chakra-text css-1obn0sx"
         >
           Starbuks
         </p>
@@ -542,7 +542,7 @@ exports[`Table render should render Table component 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-fuwb12"
+          class="chakra-text css-1obn0sx"
         >
           Jennie cooper
         </p>
@@ -641,7 +641,7 @@ exports[`Table render should render Table component 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-m50rwi"
+          class="chakra-text css-1obn0sx"
         >
           The walt disney
         </p>
@@ -679,7 +679,7 @@ exports[`Table render should render Table component 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-fuwb12"
+          class="chakra-text css-1obn0sx"
         >
           Philip steward
         </p>
@@ -778,7 +778,7 @@ exports[`Table render should render Table component 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-m50rwi"
+          class="chakra-text css-1obn0sx"
         >
           Mitsubishi
         </p>
@@ -816,7 +816,7 @@ exports[`Table render should render Table component 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-fuwb12"
+          class="chakra-text css-1obn0sx"
         >
           Jorge black
         </p>
@@ -915,7 +915,7 @@ exports[`Table render should render Table component 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-m50rwi"
+          class="chakra-text css-1obn0sx"
         >
           Ibm
         </p>
@@ -953,7 +953,7 @@ exports[`Table render should render Table component 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-fuwb12"
+          class="chakra-text css-1obn0sx"
         >
           Gladys jones
         </p>

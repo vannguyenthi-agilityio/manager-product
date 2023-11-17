@@ -7,7 +7,7 @@ export const MESSAGES_ERROR = {
   ADD_NEW_PRODUCT_FAIL: 'Add new product fail!',
   REMOVE_PRODUCT_SUCCESS: 'Remove product successful!',
   REMOVE_PRODUCT_FAIL: 'Remove product fail!',
-  UPDATE_PRODUCT_SUCCESS: 'Add product success!',
+  UPDATE_PRODUCT_SUCCESS: 'Update product success!',
   UPDATE_PRODUCT_FAIL: 'Update product fail!',
   EXIST_PRODUCT: 'Product already exist',
   NAME_MIN_LENGTH: 'Minimum length should be 4',
