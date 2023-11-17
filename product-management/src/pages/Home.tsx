@@ -101,7 +101,7 @@ const HomePage = () => {
           textAlign='left'
           color={`${COLORS.BLACK}.200`}
         >
-          Managermance
+          Management
         </Heading>
         <Flex justifyContent='right'>
           <Button

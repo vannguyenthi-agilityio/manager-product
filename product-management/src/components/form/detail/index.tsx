@@ -14,11 +14,17 @@ import { convertPxToRem } from '@utils/index';
 // Components
 import FormProduct from '@components/form';
 
+// Hooks
+import { useCustomPopup } from '@hooks/useCustomPopup';
+
 // Types
 import { Product } from '@types';
 
+//Stories
+import productStore from '@stores/index';
+
 // Constants
-import { MOCKED_PRODUCT_VALUE_DEFAULT } from '@constants';
+import { MOCKED_PRODUCT_VALUE_DEFAULT, MESSAGES_ERROR, POPUP_STATUS } from '@constants';
 
 export interface IFormProductProps {
   product?: Product;
@@ -27,7 +33,7 @@ export interface IFormProductProps {
 }
 
 export const FormDetail: FC<IFormProductProps> = ({ product }) => {
-  const { handleSubmit, register, formState, watch } = useForm<IFormProductProps>({
+  const { handleSubmit, register, formState, watch, reset } = useForm<IFormProductProps>({
     defaultValues: {
       product: product
     },
@@ -35,8 +41,9 @@ export const FormDetail: FC<IFormProductProps> = ({ product }) => {
   });
 
   const navigate = useNavigate();
+  const popup = useCustomPopup();
 
-  const { isSubmitting, errors, dirtyFields } = formState;
+  const { isSubmitting, errors, isDirty } = formState;
 
   const price = useRef({});
   const quantity = useRef({});
@@ -46,8 +53,7 @@ export const FormDetail: FC<IFormProductProps> = ({ product }) => {
   const isEmptyQuantity = quantity.current.toString() == '';
 
   const disableBtnSubmit =
-    !dirtyFields.product?.name ||
-    !dirtyFields.product?.brand ||
+    !isDirty ||
     !!errors.product?.name?.message ||
     !!errors.product?.brand?.message ||
     !!errors.product?.price?.message ||
@@ -55,8 +61,28 @@ export const FormDetail: FC<IFormProductProps> = ({ product }) => {
     isEmptyPrice ||
     isEmptyQuantity;
 
+  const { isLoading, messageError, updateProduct } = productStore();
+
   const onSubmit = (data: IFormProductProps) => {
-    console.log(data);
+    if (data.product && product) {
+      const dataProductUpdated = {
+        ...product,
+        name: data.product.name,
+        status: data.product.status,
+        types: data.product.types,
+        quantity: data.product.quantity,
+        brand: data.product.brand,
+        price: data.product.price
+      };
+      updateProduct(dataProductUpdated);
+    }
+    if (isLoading && messageError) {
+      popup(MESSAGES_ERROR.UPDATE_PRODUCT_FAIL, POPUP_STATUS.ERROR);
+    } else {
+      popup(MESSAGES_ERROR.UPDATE_PRODUCT_SUCCESS, POPUP_STATUS.SUCCESS);
+      reset();
+      navigate(ROUTES.HOME);
+    }
   };
 
   const handleBack = () => {
