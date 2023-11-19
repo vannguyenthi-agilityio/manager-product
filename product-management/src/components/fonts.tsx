@@ -7,7 +7,7 @@ const Fonts = () => (
         font-family: 'OpenSans';
         font-display: swap;
         font-style: normal;
-        src: url('../src/assets/fonts/OpenSans.woff2') format('woff2');
+        src: url('/assets/fonts/OpenSans.woff2') format('woff2');
       }
     `}
   />
